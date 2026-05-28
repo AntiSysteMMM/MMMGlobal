@@ -1,47 +1,150 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Os bancos são pirâmides financeiras! E o MMM 2.0 é um sistema para o povo.</title>
-<style>
-img{max-width:100%;height:auto;display:block;margin:0 auto}
-iframe{display:block;max-width:100%}
-:root{--bg:#fff;--text:#1a1a1a;--muted:#6b7280;--accent:#1a1a1a;--link:#2563eb;--border:#e5e7eb;--code-bg:#f3f4f6}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;font-size:16px;font-weight:400}
-.wrap{max-width:720px;margin:0 auto;padding:40px 20px 80px}
-article{display:block}
-h1{font-size:32px;line-height:1.25;margin-bottom:24px;letter-spacing:-.02em;font-weight:700}
-article p{margin-bottom:16px;font-size:17px}
-article h2{font-size:22px;margin:32px 0 12px;letter-spacing:-.01em;font-weight:700}
-article h3{font-size:19px;margin:24px 0 12px;letter-spacing:-.01em;font-weight:700}
-article a{color:var(--link);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
-article a:hover{border-bottom-color:var(--link)}
-article ul,article ol{margin:0 0 16px 24px}
-article li{margin-bottom:8px;font-size:16px}
-article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 16px;margin:20px 0;color:#374151;font-style:italic}
-figure{margin:20px 0}
-figure>div{max-width:100%}
-hr{border:none;border-top:1px solid var(--border);margin:28px 0}
-.youtube-embed,.video-embed{position:relative;padding-bottom:56.25%;height:0;margin:20px 0;overflow:hidden}
-.youtube-embed iframe,.video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-.spacer{display:none}
-.section{margin:16px 0;padding:12px 16px;border-radius:8px;text-align:center}
-@media(max-width:1024px){.wrap{padding:32px 24px 64px}h1{font-size:28px}article p{font-size:16px}}
-@media(max-width:768px){.wrap{padding:24px 16px 48px}h1{font-size:24px;line-height:1.3}h2{font-size:20px}article p{font-size:18px;font-weight:500;line-height:1.6}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.3}}
-@media(max-width:480px){.wrap{padding:16px 12px 40px}h1{font-size:22px}h2{font-size:18px}article p{font-size:18px}.youtube-embed,.video-embed{margin:16px 0}}
-@media(min-width:1200px){.wrap{max-width:800px;padding:48px 40px 96px}h1{font-size:36px}article p{font-size:18px}}
-@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
-@media(prefers-color-scheme:dark){:root{--bg:#1a1a1a;--text:#f5f5f5;--muted:#9ca3af;--accent:#f5f5f5;--border:#374151;--code-bg:#2d2d2d}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Os bancos são pirâmides financeiras! E o MMM 2.0 é um sistema para o povo.</title>
+  <style>
+:root {
+  --bg: #f9f7f2;
+  --text: #1f1f1f;
+  --text-muted: #4a4640;
+  --accent: #2a4a6f;
+  --border: #d9d4c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1816;
+    --text: #e8e4d9;
+    --text-muted: #a39a8c;
+    --accent: #8aa4c2;
+    --border: #3a3630;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.82;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+article {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.4em;
+}
+
+h2, h3, h4 {
+  font-weight: 700;
+  margin: 1.8em 0 0.6em;
+}
+
+p {
+  margin: 0 0 1.15em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+figure {
+  margin: 2em 0;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+figcaption {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 1.8em 0;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.callout {
+  margin: 1.8em 0;
+  padding: 1.1em 1.3em;
+  border-radius: 6px;
+  border-left: 5px solid var(--accent);
+  background: #f0e9dc;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Заголовки внутри callout не должны сильно раздувать рамку */
+.callout h1,
+.callout h2,
+.callout h3,
+.callout h4,
+.callout h5 {
+  margin: 0.2em 0 0.35em;
+  line-height: 1.25;
+  font-size: 1.1em;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 2.4em 0;
+}
+
+@media (max-width: 600px) {
+  .wrap { padding: 40px 18px 80px; }
+  body { font-size: 17px; }
+}
+  </style>
 </head>
 <body>
-<div class="wrap">
-<article>
-<h1>Os bancos são pirâmides financeiras! E o MMM 2.0 é um sistema para o povo.</h1>
-<div class="section" style="background-color: hsl(236, 74%, var(--autocolor-background-lightness, 95%));"><p>Registo no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobalStatic">@Mavrodi_robot</a></strong></p></div><div class="section" style="background-color: hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p><strong><a href="index.html" class="">PARA A PÁGINA INICIAL</a></strong></p></div><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><img src="a6f19321-970d-4121-b1ec-933caf780e78.png" class=""></figure><p>O banco é uma instituição financeira que, pela lógica das coisas, deveria servir às pessoas. Trazer benefícios aos seus clientes.</p><p>Por exemplo, o correio atende as pessoas. Através do serviço postal, você pode enviar ou receber uma carta, algum pacote. O benefício é inequívoco e óbvio. O correio é o envio e a entrega de cartas, encomendas, cargas de clientes.</p><p>Por essa lógica simples, se o banco é dinheiro, os clientes do banco, no mínimo, não deveriam precisar dele. Mas o que temos na prática? Olhe para o seu redor – 99% das pessoas são, de uma forma ou de outra, clientes de bancos. E, ao mesmo tempo, todas elas estão constantemente precisando de dinheiro! Isso no melhor dos casos. E, via de regra, as pessoas ainda devem dinheiro ao banco!.. E olhe como vivem os donos dos bancos e as estruturas de poder a eles coligadas.</p><div class="section" style="background-color: hsl(24,  24%, var(--autocolor-background-lightness, 95%));"><p><strong>Então, a quem o banco serve? Aos clientes? Ou aos seus donos, que o abrem apenas para obter lucro, manipulando o dinheiro das pessoas?</strong></p></div><div class="section" style="background-color: hsl(34,  84%, var(--autocolor-background-lightness, 95%));"><p>A questão toda é que o banco é, de fato, uma "pirâmide financeira" legalizada, que enriquece o banqueiro e as estruturas a ele ligadas (o poder, os burocratas, a mídia e os mass media – tudo isso é uma mesma corja, alimentada pelo sistema bancário). Já os clientes – pessoas simples, cidadãos comuns – o banqueiro mantém no anzol e literalmente ordenha! O paradoxo da estrutura do sistema bancário reside no fato de que todo o dinheiro no banco, que o banco empresta, é o dinheiro de pessoas simples: nossas poupanças e economias, que mantemos em depósitos bancários por desespero e falta de alternativas. Não há outro dinheiro no banco. Apenas o dinheiro das pessoas.</p></div><p>A injustiça reside no fato de que o banqueiro manipula a sociedade por meio das taxas de juros. Como isso acontece? Em muitos países, durante uma crise, quando o Estado fica sem dinheiro, as taxas de juros sobem drasticamente (as taxas de juros sobre depósitos e, em seguida, as taxas de juros sobre empréstimos). É claro que as autoridades podem justificar isso alegando que é vantajoso e benéfico para a economia! Na verdade, isso é feito apenas para atrair o dinheiro dos cidadãos para os depósitos, cujos juros se tornaram mais atraentes. E como o homem moderno “trabalha honestamente” e está sempre ganhando dinheiro, ele não faz ideia de como isso funciona na prática e, com alegria, deposita seu dinheiro (inclusive porque não há alternativas). Ao mesmo tempo, a taxa de juros dos empréstimos aumenta, e é importante sempre lembrar disso. É aqui que começa o interessante:</p><p>A essência desse processo é simples. Onde hoje o empresário deve conseguir o capital inicial para o seu negócio? Onde conseguir dinheiro para equipamentos, para o aluguel e reforma do espaço, para o salário dos funcionários e outras despesas iniciais? Em sua grande maioria – isso, é claro, são empréstimos bancários. Mas o empresário abre o negócio para obter lucro. E aí o banco começa a sufocá-lo com juros aumentados no empréstimo. O que o empresário deve fazer para acertar as contas com o banco e ainda sobrar algo para viver? Para ele mesmo ganhar alguma coisa? Embutir as despesas do empréstimo no preço de seus produtos. O que, como vemos, está acontecendo – os preços de tudo estão subindo.</p><div class="section" style="background-color: hsl(323, 50%, var(--autocolor-background-lightness, 95%));"><p><strong>Assim, no mundo moderno, as despesas com empréstimos estão embutidas no preço de todos os bens e serviços.</strong> E mesmo que você não pegue empréstimos – muitos se gabam disso –, você paga pelos empréstimos dos outros! E quanto maior a taxa básica no sistema bancário, maiores são os juros dos empréstimos – e mais fortemente os preços no país sobem.</p></div><div class="section" style="background-color: hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p><strong>Eis o que representa o moderno sistema bancário, baseado nos juros com reservas fracionárias – é uma "pirâmide financeira" em estado puro!</strong> Desse modo simples, os agiotas hoje manipulam as pessoas através da "pirâmide financeira" bancária. Deve-se dizer que essa escravidão é pior do que a servidão. Pois os escravos julgam-se livres – os grilhões são invisíveis. Financeiros! Parece aos escravos que tudo isso é natural e não pode ser de outro modo.</p></div><p>Mas pode ser de outro modo! E há uma saída elegantíssima para essa escravidão – o MMM Global. Não é à toa que se diz "combater fogo com fogo".</p><div class="section" style="background-color: hsl(263, 48%, var(--autocolor-background-lightness, 95%));"><p><strong>O que é, então, o MMM Global?</strong> Tecnicamente, é exatamente a mesma "pirâmide financeira", se falarmos na linguagem habitual da maioria. No sentido de que aqui só há o dinheiro das pessoas, e tudo depende do afluxo de dinheiro dos participantes: os juros, que no MMM Global não são garantidos, são pagos exclusivamente com o dinheiro dos participantes.</p></div><p>No entanto, como acabamos de descobrir, exatamente o mesmo acontece nos bancos. Mas, ao contrário dos bancos, no MMM Global isso é comunicado a todos de forma direta logo de cara – leiam o aviso no bot do Telegram <a href="https://t.me/mavrodi_robot?start=MMMglobal_static"><strong>@Mavrodi_robot</strong></a> ou no site <strong><a href="http://bazamavrodi.com/">BazaMavrodi.com</a></strong>. Não é preciso levar dinheiro a lugar nenhum – apenas leiam sem preconceito e reflitam.</p><div class="section" style="background-color: hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p>Mas o mais importante é que, no MMM Global, todos esses juros "impensáveis" são pagos aos participantes comuns! A pessoas comuns!! Ou seja, o MMM Global não trabalha para o organizador (que, na prática, nem existe aqui), mas para os próprios participantes. Mesmo do ponto de vista puramente técnico, todo o dinheiro do MMM Global está nos cartões de débito pessoais dos participantes – pessoas comuns. E eles transferem esse dinheiro diretamente uns para os outros sem qualquer garantia, promessa, contrato, condição de prazo ou de retorno. No MMM Global, as pessoas trocam seu dinheiro entre si sem garantia ou promessa de retorno.</p></div><div class="section" style="background-color: hsl(34,  84%, var(--autocolor-background-lightness, 95%));"><p><strong>Resumindo.</strong> Pode-se dizer que, no MMM Global, cada participante é o seu próprio banqueiro e o seu próprio cliente. O MMM Global, ao contrário da pirâmide bancária, trabalha para as pessoas comuns! E essa é a única razão pela qual as autoridades, ao longo de décadas, fazem tanto esforço e gastam rios de dinheiro para, através da mídia controlada, criar na consciência pública uma imagem negativa de Sergei Mavrodi e do sistema MMM. Não há outros motivos! O MMM liberta as pessoas comuns dos preconceitos impostos, dos empréstimos e depósitos bancários.</p></div><p>Pergunta-se: para que diabos uma pessoa que ganha supostamente de 20% a 100% ao mês precisa de empréstimos e depósitos? Por que uma pessoa assim precisaria ir para um trabalho odiado só para sobreviver de forma estúpida? Sim, essa pessoa vai se ocupar com a sua vida, sua família e com o que gosta de fazer! O dinheiro ela já tem. Ela nem na política vai se meter. Assim, o MMM Global literalmente arranca o chão sob os pés dos banqueiros. Ele coloca tudo em seu devido lugar: no MMM, os verdadeiros donos do dinheiro – pessoas simples, cidadãos comuns – recebem todo o lucro. O MMM Global não torna as pessoas apenas livres, esse sistema nos torna – Pessoas!</p><div class="section" style="background-color: hsl(323, 50%, var(--autocolor-background-lightness, 95%));"><p><strong>Quanto ao objetivo do MMM.</strong> Os donos da pirâmide bancária, através dos mesmos meios de comunicação de bolso, cultivaram na consciência pública mais um mito, de que "a pirâmide vai ruir quando acabarem os novos depositantes!" Essa é mais uma mentira deslavada e sem vergonha. E aqui, novamente, tudo é exatamente o oposto: quanto mais participantes houver no MMM Global, mais estável o sistema se torna. Como resultado, quando uma massa crítica de pessoas entrar no MMM Global, ele se tornará fechado, assim como a pirâmide bancária. Que, como uma teia pegajosa, envolveu o mundo inteiro e tornou todas as pessoas no planeta suas escravas.</p></div><div class="section" style="background-color: hsl(170, 33%, var(--autocolor-background-lightness, 95%));"><p>Em resumo, a essência de um sistema fechado reside no fato de que o dinheiro não sai dos limites desse sistema. Por exemplo, por mais dinheiro que você receba no MMM Global, você vai gastá-lo. O que, em essência, significa – transferi-lo a outra pessoa em troca de um bem ou serviço. E essa pessoa também é participante do MMM Global, consequentemente, ela imediatamente devolverá esse dinheiro de volta ao sistema. Afinal, onde mais se pagam supostamente de 20% a 100% ao mês?!..</p></div><p>É exatamente assim que, no momento, funciona a pirâmide bancária – o dinheiro não sai dos seus limites.</p><p>Além disso, essa é uma questão fundamental para a compreensão da estrutura das "pirâmides financeiras". Assim que você entender o conceito de "sistema fechado", você perceberá a escala do engano no qual todos nós tentamos sobreviver. Afinal, o que acontece no mundo hoje não dá para chamar de vida.</p><div class="section" style="background-color: hsl(263, 48%, var(--autocolor-background-lightness, 95%));"><p><strong>Bem-vindos à realidade que Nós estamos criando com as nossas próprias mãos agora mesmo!</strong> Estudem tudo e juntem-se às pessoas razoáveis. E lembrem-se: a nossa vida está apenas em nossas mãos. Agindo, Nós mudamos literalmente essa realidade, mudamos esse mundo. E, não agindo, Nós somos apenas objetos guiados – acomodados, que se convenceram de que nada depende de nós. Depende sim. Tudo depende exclusivamente de nós!</p></div><p><strong>Juntos Nós Podemos Muito! E Nós Mudamos o Mundo!</strong></p><hr><div class="section" style="background-color: hsl(236, 74%, var(--autocolor-background-lightness, 95%));"><p>Registo no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobalStatic">@Mavrodi_robot</a></strong></p></div><div class="section" style="background-color: hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p><strong><a href="index.html" class="">PARA A PÁGINA INICIAL</a></strong></p></div>
-</article>
-</div>
+  <div class="wrap">
+    <article>
+      <h1>Os bancos são pirâmides financeiras! E o MMM 2.0 é um sistema para o povo.</h1>
+      <article class="article__content text" itemprop="articleBody"><div class="callout" style="border-left-color:#4a6fa5; background:#e8eef7;"><!-- --><p>Registo no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobalStatic">@Mavrodi_robot</a></strong></p></div><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><p><strong><a class="" href="https://teletype.in/@mmm2.0_admin/index">PARA A PÁGINA INICIAL</a></strong></p></div><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><a name="USXZ"></a><div class="wrap"><!-- --><img class="" id="USXZ" src="a6f19321-970d-4121-b1ec-933caf780e78.png"/><!-- --></div><!-- --></figure><p><a name="8AFY"></a>O banco é uma instituição financeira que, pela lógica das coisas, deveria servir às pessoas. Trazer benefícios aos seus clientes.</p><p><a name="xnuj"></a>Por exemplo, o correio atende as pessoas. Através do serviço postal, você pode enviar ou receber uma carta, algum pacote. O benefício é inequívoco e óbvio. O correio é o envio e a entrega de cartas, encomendas, cargas de clientes.</p><p><a name="D4RD"></a>Por essa lógica simples, se o banco é dinheiro, os clientes do banco, no mínimo, não deveriam precisar dele. Mas o que temos na prática? Olhe para o seu redor – 99% das pessoas são, de uma forma ou de outra, clientes de bancos. E, ao mesmo tempo, todas elas estão constantemente precisando de dinheiro! Isso no melhor dos casos. E, via de regra, as pessoas ainda devem dinheiro ao banco!.. E olhe como vivem os donos dos bancos e as estruturas de poder a eles coligadas.</p><div class="callout" style="border-left-color:#6b6257; background:#f0e9dc;"><!-- --><p><strong>Então, a quem o banco serve? Aos clientes? Ou aos seus donos, que o abrem apenas para obter lucro, manipulando o dinheiro das pessoas?</strong></p></div><div class="callout" style="border-left-color:#6b6257; background:#f0e9dc;"><!-- --><p>A questão toda é que o banco é, de fato, uma "pirâmide financeira" legalizada, que enriquece o banqueiro e as estruturas a ele ligadas (o poder, os burocratas, a mídia e os mass media – tudo isso é uma mesma corja, alimentada pelo sistema bancário). Já os clientes – pessoas simples, cidadãos comuns – o banqueiro mantém no anzol e literalmente ordenha! O paradoxo da estrutura do sistema bancário reside no fato de que todo o dinheiro no banco, que o banco empresta, é o dinheiro de pessoas simples: nossas poupanças e economias, que mantemos em depósitos bancários por desespero e falta de alternativas. Não há outro dinheiro no banco. Apenas o dinheiro das pessoas.</p></div><p><a name="e9CZ"></a>A injustiça reside no fato de que o banqueiro manipula a sociedade por meio das taxas de juros. Como isso acontece? Em muitos países, durante uma crise, quando o Estado fica sem dinheiro, as taxas de juros sobem drasticamente (as taxas de juros sobre depósitos e, em seguida, as taxas de juros sobre empréstimos). É claro que as autoridades podem justificar isso alegando que é vantajoso e benéfico para a economia! Na verdade, isso é feito apenas para atrair o dinheiro dos cidadãos para os depósitos, cujos juros se tornaram mais atraentes. E como o homem moderno “trabalha honestamente” e está sempre ganhando dinheiro, ele não faz ideia de como isso funciona na prática e, com alegria, deposita seu dinheiro (inclusive porque não há alternativas). Ao mesmo tempo, a taxa de juros dos empréstimos aumenta, e é importante sempre lembrar disso. É aqui que começa o interessante:</p><p><a name="mauX"></a>A essência desse processo é simples. Onde hoje o empresário deve conseguir o capital inicial para o seu negócio? Onde conseguir dinheiro para equipamentos, para o aluguel e reforma do espaço, para o salário dos funcionários e outras despesas iniciais? Em sua grande maioria – isso, é claro, são empréstimos bancários. Mas o empresário abre o negócio para obter lucro. E aí o banco começa a sufocá-lo com juros aumentados no empréstimo. O que o empresário deve fazer para acertar as contas com o banco e ainda sobrar algo para viver? Para ele mesmo ganhar alguma coisa? Embutir as despesas do empréstimo no preço de seus produtos. O que, como vemos, está acontecendo – os preços de tudo estão subindo.</p><div class="callout" style="border-left-color:#9b6b8a; background:#f7eef4;"><!-- --><p><strong>Assim, no mundo moderno, as despesas com empréstimos estão embutidas no preço de todos os bens e serviços.</strong> E mesmo que você não pegue empréstimos – muitos se gabam disso –, você paga pelos empréstimos dos outros! E quanto maior a taxa básica no sistema bancário, maiores são os juros dos empréstimos – e mais fortemente os preços no país sobem.</p></div><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><p><strong>Eis o que representa o moderno sistema bancário, baseado nos juros com reservas fracionárias – é uma "pirâmide financeira" em estado puro!</strong> Desse modo simples, os agiotas hoje manipulam as pessoas através da "pirâmide financeira" bancária. Deve-se dizer que essa escravidão é pior do que a servidão. Pois os escravos julgam-se livres – os grilhões são invisíveis. Financeiros! Parece aos escravos que tudo isso é natural e não pode ser de outro modo.</p></div><p><a name="bcpZ"></a>Mas pode ser de outro modo! E há uma saída elegantíssima para essa escravidão – o MMM Global. Não é à toa que se diz "combater fogo com fogo".</p><div class="callout" style="border-left-color:#6b6257; background:#f0e9dc;"><!-- --><p><strong>O que é, então, o MMM Global?</strong> Tecnicamente, é exatamente a mesma "pirâmide financeira", se falarmos na linguagem habitual da maioria. No sentido de que aqui só há o dinheiro das pessoas, e tudo depende do afluxo de dinheiro dos participantes: os juros, que no MMM Global não são garantidos, são pagos exclusivamente com o dinheiro dos participantes.</p></div><p><a name="QEcq"></a>No entanto, como acabamos de descobrir, exatamente o mesmo acontece nos bancos. Mas, ao contrário dos bancos, no MMM Global isso é comunicado a todos de forma direta logo de cara – leiam o aviso no bot do Telegram <a href="https://t.me/mavrodi_robot?start=MMMglobal_static"><strong>@Mavrodi_robot</strong></a> ou no site <strong><a href="http://bazamavrodi.com/">BazaMavrodi.com</a></strong>. Não é preciso levar dinheiro a lugar nenhum – apenas leiam sem preconceito e reflitam.</p><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><p>Mas o mais importante é que, no MMM Global, todos esses juros "impensáveis" são pagos aos participantes comuns! A pessoas comuns!! Ou seja, o MMM Global não trabalha para o organizador (que, na prática, nem existe aqui), mas para os próprios participantes. Mesmo do ponto de vista puramente técnico, todo o dinheiro do MMM Global está nos cartões de débito pessoais dos participantes – pessoas comuns. E eles transferem esse dinheiro diretamente uns para os outros sem qualquer garantia, promessa, contrato, condição de prazo ou de retorno. No MMM Global, as pessoas trocam seu dinheiro entre si sem garantia ou promessa de retorno.</p></div><div class="callout" style="border-left-color:#6b6257; background:#f0e9dc;"><!-- --><p><strong>Resumindo.</strong> Pode-se dizer que, no MMM Global, cada participante é o seu próprio banqueiro e o seu próprio cliente. O MMM Global, ao contrário da pirâmide bancária, trabalha para as pessoas comuns! E essa é a única razão pela qual as autoridades, ao longo de décadas, fazem tanto esforço e gastam rios de dinheiro para, através da mídia controlada, criar na consciência pública uma imagem negativa de Sergei Mavrodi e do sistema MMM. Não há outros motivos! O MMM liberta as pessoas comuns dos preconceitos impostos, dos empréstimos e depósitos bancários.</p></div><p><a name="KWFI"></a>Pergunta-se: para que diabos uma pessoa que ganha supostamente de 20% a 100% ao mês precisa de empréstimos e depósitos? Por que uma pessoa assim precisaria ir para um trabalho odiado só para sobreviver de forma estúpida? Sim, essa pessoa vai se ocupar com a sua vida, sua família e com o que gosta de fazer! O dinheiro ela já tem. Ela nem na política vai se meter. Assim, o MMM Global literalmente arranca o chão sob os pés dos banqueiros. Ele coloca tudo em seu devido lugar: no MMM, os verdadeiros donos do dinheiro – pessoas simples, cidadãos comuns – recebem todo o lucro. O MMM Global não torna as pessoas apenas livres, esse sistema nos torna – Pessoas!</p><div class="callout" style="border-left-color:#9b6b8a; background:#f7eef4;"><!-- --><p><strong>Quanto ao objetivo do MMM.</strong> Os donos da pirâmide bancária, através dos mesmos meios de comunicação de bolso, cultivaram na consciência pública mais um mito, de que "a pirâmide vai ruir quando acabarem os novos depositantes!" Essa é mais uma mentira deslavada e sem vergonha. E aqui, novamente, tudo é exatamente o oposto: quanto mais participantes houver no MMM Global, mais estável o sistema se torna. Como resultado, quando uma massa crítica de pessoas entrar no MMM Global, ele se tornará fechado, assim como a pirâmide bancária. Que, como uma teia pegajosa, envolveu o mundo inteiro e tornou todas as pessoas no planeta suas escravas.</p></div><div class="callout" style="border-left-color:#4a8a6f; background:#e8f3ed;"><!-- --><p>Em resumo, a essência de um sistema fechado reside no fato de que o dinheiro não sai dos limites desse sistema. Por exemplo, por mais dinheiro que você receba no MMM Global, você vai gastá-lo. O que, em essência, significa – transferi-lo a outra pessoa em troca de um bem ou serviço. E essa pessoa também é participante do MMM Global, consequentemente, ela imediatamente devolverá esse dinheiro de volta ao sistema. Afinal, onde mais se pagam supostamente de 20% a 100% ao mês?!..</p></div><p><a name="ALKo"></a>É exatamente assim que, no momento, funciona a pirâmide bancária – o dinheiro não sai dos seus limites.</p><p><a name="7nJf"></a>Além disso, essa é uma questão fundamental para a compreensão da estrutura das "pirâmides financeiras". Assim que você entender o conceito de "sistema fechado", você perceberá a escala do engano no qual todos nós tentamos sobreviver. Afinal, o que acontece no mundo hoje não dá para chamar de vida.</p><div class="callout" style="border-left-color:#6b6257; background:#f0e9dc;"><!-- --><p><strong>Bem-vindos à realidade que Nós estamos criando com as nossas próprias mãos agora mesmo!</strong> Estudem tudo e juntem-se às pessoas razoáveis. E lembrem-se: a nossa vida está apenas em nossas mãos. Agindo, Nós mudamos literalmente essa realidade, mudamos esse mundo. E, não agindo, Nós somos apenas objetos guiados – acomodados, que se convenceram de que nada depende de nós. Depende sim. Tudo depende exclusivamente de nós!</p></div><p><a name="SdXC"></a><strong>Juntos Nós Podemos Muito! E Nós Mudamos o Mundo!</strong></p><hr/><div class="callout" style="border-left-color:#4a6fa5; background:#e8eef7;"><!-- --><p>Registo no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobalStatic">@Mavrodi_robot</a></strong></p></div><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><p><strong><a class="" href="https://teletype.in/@mmm2.0_admin/index">PARA A PÁGINA INICIAL</a></strong></p></div></article>
+    </article>
+  </div>
 </body>
 </html>

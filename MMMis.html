@@ -1,47 +1,150 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>O que é o MMM?</title>
-<style>
-img{max-width:100%;height:auto;display:block;margin:0 auto}
-iframe{display:block;max-width:100%}
-:root{--bg:#fff;--text:#1a1a1a;--muted:#6b7280;--accent:#1a1a1a;--link:#2563eb;--border:#e5e7eb;--code-bg:#f3f4f6}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;font-size:16px;font-weight:400}
-.wrap{max-width:720px;margin:0 auto;padding:40px 20px 80px}
-article{display:block}
-h1{font-size:32px;line-height:1.25;margin-bottom:24px;letter-spacing:-.02em;font-weight:700}
-article p{margin-bottom:16px;font-size:17px}
-article h2{font-size:22px;margin:32px 0 12px;letter-spacing:-.01em;font-weight:700}
-article h3{font-size:19px;margin:24px 0 12px;letter-spacing:-.01em;font-weight:700}
-article a{color:var(--link);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
-article a:hover{border-bottom-color:var(--link)}
-article ul,article ol{margin:0 0 16px 24px}
-article li{margin-bottom:8px;font-size:16px}
-article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 16px;margin:20px 0;color:#374151;font-style:italic}
-figure{margin:20px 0}
-figure>div{max-width:100%}
-hr{border:none;border-top:1px solid var(--border);margin:28px 0}
-.youtube-embed,.video-embed{position:relative;padding-bottom:56.25%;height:0;margin:20px 0;overflow:hidden}
-.youtube-embed iframe,.video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-.spacer{display:none}
-.section{margin:16px 0;padding:12px 16px;border-radius:8px;text-align:center}
-@media(max-width:1024px){.wrap{padding:32px 24px 64px}h1{font-size:28px}article p{font-size:16px}}
-@media(max-width:768px){.wrap{padding:24px 16px 48px}h1{font-size:24px;line-height:1.3}h2{font-size:20px}article p{font-size:18px;font-weight:500;line-height:1.6}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.3}}
-@media(max-width:480px){.wrap{padding:16px 12px 40px}h1{font-size:22px}h2{font-size:18px}article p{font-size:18px}.youtube-embed,.video-embed{margin:16px 0}}
-@media(min-width:1200px){.wrap{max-width:800px;padding:48px 40px 96px}h1{font-size:36px}article p{font-size:18px}}
-@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
-@media(prefers-color-scheme:dark){:root{--bg:#1a1a1a;--text:#f5f5f5;--muted:#9ca3af;--accent:#f5f5f5;--border:#374151;--code-bg:#2d2d2d}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O que é o MMM?</title>
+  <style>
+:root {
+  --bg: #f9f7f2;
+  --text: #1f1f1f;
+  --text-muted: #4a4640;
+  --accent: #2a4a6f;
+  --border: #d9d4c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1816;
+    --text: #e8e4d9;
+    --text-muted: #a39a8c;
+    --accent: #8aa4c2;
+    --border: #3a3630;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.82;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+article {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.4em;
+}
+
+h2, h3, h4 {
+  font-weight: 700;
+  margin: 1.8em 0 0.6em;
+}
+
+p {
+  margin: 0 0 1.15em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+figure {
+  margin: 2em 0;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+figcaption {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 1.8em 0;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.callout {
+  margin: 1.8em 0;
+  padding: 1.1em 1.3em;
+  border-radius: 6px;
+  border-left: 5px solid var(--accent);
+  background: #f0e9dc;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Заголовки внутри callout не должны сильно раздувать рамку */
+.callout h1,
+.callout h2,
+.callout h3,
+.callout h4,
+.callout h5 {
+  margin: 0.2em 0 0.35em;
+  line-height: 1.25;
+  font-size: 1.1em;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 2.4em 0;
+}
+
+@media (max-width: 600px) {
+  .wrap { padding: 40px 18px 80px; }
+  body { font-size: 17px; }
+}
+  </style>
 </head>
 <body>
-<div class="wrap">
-<article>
-<h1>O que é o MMM?</h1>
-<div class="section" style="background-color: hsl(236, 74%, var(--autocolor-background-lightness, 95%));"><p>Registrando-se no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobal">@Mavrodi_robot</a></strong></p></div><div class="section" style="background-color: hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p><a href="index.html" class=""><strong>PARA A PÁGINA INICIAL</strong></a></p></div><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><img src="ab0a2f8e-3195-4b63-96d8-489b6e3c3c2c.jpeg" class=""></div><figcaption itemprop="description">Uma rede viva e estruturada, baseada na confiança e na ajuda mútua; um sistema automatizado absolutamente descentralizado, no qual um bot do Telegram conecta os participantes diretamente uns aos outros; ausência de bancos de dados únicos, servidores e centros de controle. Dispersão total!</figcaption></figure><div class="section" style="background-color: hsl(24,  24%, var(--autocolor-background-lightness, 95%));"><p>O que é o MMM? Uma união voluntária e informal de pessoas, muitos e muitos milhões de pessoas simples e comuns do mundo todo. São pessoas das mais variadas idades, nacionalidades, religiões, convicções e posições sociais. Homens e mulheres. Europeus e americanos, russos e australianos, chineses, Os brasileiros e indianos. Brancos, negros, amarelos... Mas todos eles são unidos por uma coisa só: o desejo de ajudar uns aos outros! Fazer o bem. "Amai o próximo"! Ajude-o. Não fale – faça!</p></div><p>Em sua essência, o MMM é uma organização beneficente em sua forma mais pura e original, limpa de toda a escória de formalidades desnecessárias e de burocracias que matam tudo o que é vivo e que são absolutamente inadequadas em um assunto tão sagrado e puro quanto a caridade e a ajuda mútua. Em nosso mundo moderno, abafado e excessivamente regulamentado, um mundo de desconfiança e suspeita generalizadas, todos esses contratos, assinaturas e carimbos parecem algo indispensável e até óbvio: "Mas como seria diferente? Senão, vão me enganar. Se não houver contrato. Como alguém pode não enganar, se tiver a oportunidade completa? Com certeza vai enganar". Sim, com certeza. Se você esperar isso dele. Ofendê-lo com desconfiança. Ao propor um contrato, você está basicamente dizendo à pessoa: "Eu não confio em você, você é um ladrão e um vigarista. E, para que você não me engane, firmo um contrato com você, onde descrevo em inúmeros parágrafos e cláusulas todos os casos e cenários possíveis e impossíveis. Agora tente me enganar!". Você já parou para pensar? Ao fazer isso, você dá à pessoa o direito moral de enganá-lo. Se conseguir. Se encontrar uma brecha em seus inúmeros parágrafos e cláusulas. Basicamente, isso também faz parte do contrato. Essa brecha. Encontre – e você está certo. Tudo estritamente conforme o contrato! E de moralidade aqui não se fala nem um pouco. O homem é o lobo do homem! Que moralidade, quando se trata de DINHEIRO?! Não me façam rir, senhores.</p><p>No MMM, nada disso existe em princípio. Nem de perto! O MMM é um retorno às origens, aos valores humanos verdadeiros, globais e autênticos. É um tipo de sistema de ajuda mútua inicial, "verdadeiro", honesto e justo. Como qualquer pessoa imagina em seu coração.</p><p>Por exemplo, na família. Você não exige carimbos e assinaturas, exige? Tudo é baseado na confiança, e não em "garantias e obrigações", certo? (Caso contrário, como viver?) Exatamente da mesma forma aqui. O MMM é, de certa forma, uma gigantesca caixinha virtual coletiva abstrata, na qual todos depositam dinheiro. E depois retiram conforme a necessidade. Não arrancam, não agarram com as duas mãos (mãos enormes! garras! vorazes! :-)), mas simplesmente – retiram. Porque, na verdade, uma pessoa não precisa de tanto dinheiro assim. O importante é a consciência de que ele está lá. A confiança no amanhã! O MMM justamente dá às pessoas essa confiança. Torna a pessoa livre! Financeiramente. Presenteia-a com uma sensação incomparável de solidariedade. A consciência de que, em um momento difícil, você será ajudado. Com certeza será ajudado!! E isso significa muito, mas muito mesmo, para uma pessoa. Quase tudo, na verdade! "Hoje você ajuda – amanhã ajudam você!" Esse é o lema do nosso Sistema.</p><div class="section" style="background-color: hsl(199, 50%, var(--autocolor-background-lightness, 95%));"><p>E sabem? Vou contar um segredo. Prestar ajuda a pessoas completamente desconhecidas também é muito prazeroso. Muitas vezes, até mais prazeroso do que recebê-la. Não acredita? Então experimente! Vai ver.<br>(Afinal, a pessoa gosta de se sentir boa e gentil – gosta! Isso está nela desde o início. E graças a Deus. :-))</p></div><p>Certo. Chega de lirismo. Vamos aos negócios. Senão ficamos só conversando. :-))</p><div class="section" style="background-color: hsl(34,  84%, var(--autocolor-background-lightness, 95%));"><p>Então. Ao entrar no MMM, você deve entender o seguinte. As pessoas aqui praticam a caridade, prestam ajuda umas às outras. Sem-qualquer-garantia-ou-promessa-de-retorno! Não porque querem obter algum tipo de vantagem, lucrar com dividendos etc., mas simplesmente assim. Sem motivo. Porque são boas e gentis. Porque são – Pessoas. Porque querem fazer o bem, sentem uma necessidade urgente disso. Ajudar os necessitados, os socialmente desprotegidos, ajudar quem está passando mal agora, pior do que elas mesmas. Essa é uma necessidade perfeitamente natural de qualquer ser humano, fazer o bem, não é? Caso contrário, ele já não é mais um Ser Humano.</p></div><p>Consequentemente! Aqui não há nenhuma garantia ou promessa. De vantagens patrimoniais ou coisas do tipo. Nenhuma! Absolutamente! Nem de forma explícita, nem implícita. Nenhuma vantagem patrimonial é prometida a você aqui! (Entenderam todos? Ou preciso repetir? :-)) O fato de você ter prestado ajuda a alguém não significa, de forma alguma, que ela será prestada a você depois. Talvez sim, talvez não. Caridade! É um assunto estritamente voluntário. Se quiserem, ajudam. Mas só se quiserem. Portanto, não se deve entender o lema do Sistema – "Hoje você ajuda – amanhã ajudam você!" – de forma literal. Como se a ajuda fosse obrigatória. Nada disso! Não há nada de obrigatório aqui. Ele é metafórico. E não contém promessas. No MMM, elas simplesmente não existem. Repito pela centésima, milésima vez! Não, não e não! Não há promessas aqui! Agora, sempre e para todo o sempre. Amém.</p><p>Em outras palavras. Se você veio aqui sem intenções puras, não com o objetivo de fazer o bem às pessoas, de praticá-lo! – simplesmente assim! – de forma desinteressada, alegre e sincera! – mas veio com o objetivo de agarrar tudo, por ganância, por algum tipo de "lucro" e vantagem – este não é o seu lugar. Pronto! Tudo de bom e até a próxima. Mas não neste mundo.</p><p>Certo. Agora. Vamos em frente.<br>Como tudo funciona? "Funciona" no sentido de que qualquer comunidade, mesmo que informal, tem suas próprias regras de comportamento, únicas e exclusivas. É isso que a torna uma comunidade. Única e diferente de todas as outras. É sobre isso que vamos falar agora.</p><div class="section" style="background-color: hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p>Então, quais são essas "regras"? Resumidamente, cada participante tem uma espécie de classificação (Mavro abstratos), que determina o grau de sua utilidade para o Sistema. O valor da classificação determina o valor da ajuda que o participante pode solicitar. Bem, ele pode, em princípio, solicitar qualquer valor, mas é improvável que alguém lhe preste ajuda se sua classificação for insuficiente. Uma pessoa, digamos, um homem adulto e saudável, que acabou de ajudar alguém com um dólar e logo em seguida solicita ajuda para si... de um milhão! Isso parece... um pouco... estranho. Você entende. Até a caridade é seletiva. É melhor eu transferir meu suado dinheiro para uma senhorinha que ajudou alguém no mês passado com sua moedinha e agora pede às pessoas um apoio aproximadamente igual – ou talvez um pouco maior!</p></div><div class="section" style="background-color: hsl(0,   0%,  var(--autocolor-background-lightness, 95%));"><p><strong>Do que depende a classificação?</strong> Do grau de utilidade do participante para o Sistema, repito. E essa utilidade é determinada principalmente pelo valor que ele está disposto a prestar (ou já prestou) como ajuda a outros participantes do Sistema. E também pelo comportamento do participante. Se ele declara antecipadamente que não vai solicitar ajuda por vários meses, que está tudo bem com ele, então, obviamente, sua classificação presumivelmente aumentará. Afinal, durante todo esse tempo, o dinheiro dele estará ajudando outras pessoas.</p></div><p>Com o tempo, a classificação geralmente aumenta. O que também faz sentido. Quanto mais tempo uma pessoa não solicita ajuda para si, maior valor ela representa para o Sistema. A partir de convites para o sistema de novas pessoas que prestam ajuda, sua classificação também aumentará presumivelmente. Assim, você beneficia a causa comum. Pode, no entanto, cair. Se, por exemplo, simplesmente não houver dinheiro no Sistema. Mas, de qualquer forma, você pode ler com mais detalhes sobre classificações <a href="PRAVILA.html" class=""><strong>nas "regras".</strong></a> Aqui, um aprofundamento adicional em detalhes – que são, na verdade, puramente técnicos – dificilmente seria apropriado. A ideia geral está clara, e os detalhes você lê depois.</p><p><strong>Por que um esquema tão complicado e... pouco elegante, digamos assim?</strong> Para um assunto tão simples e claro como a caridade? Parecia que, bem, se as pessoas querem ajudar umas às outras – que ajudem. Conforme suas possibilidades e sem todas essas regras e classificações. Por que complicar? E tornar tudo tão complexo? Vocês mesmos disseram: "retorno às origens!.. como na família!.. contrato é uma ofensa à desconfiança!.."</p><p>"Sem todas essas regras e classificações". Amanhã mesmo aparece um espertinho, o mais infeliz e necessitado, que envia a todos pedidos chorosos (bem, súplicas :-)), esvazia completamente o caixa e some sem deixar rastro. E aí? Sim, família. Mas até em família tem o seu "patinho feio". Sim, confiança. Porém: confie, mas confira. Sabedoria das eras. Introduza classificações. Realmente não temos contratos e papéis, mas para que as pessoas pelo menos vejam quem está pedindo ajuda a elas. Que tipo de pessoa é. :-)) Isso é normal? E aí que cada um decida por si. Prestar ajuda ou não. A caridade, sem dúvida, é voluntária.</p><p>E, de qualquer forma. O objetivo era criar um Sistema funcional. Uma organização beneficente informal verdadeira e viva (e não apenas no papel). Esse objetivo foi alcançado. Pronto! Alguma pergunta? Você consegue fazer melhor? Elegante e bonito? E sem todas essas classificações? Então, boa sorte e vá em frente. Tente. O MMM funciona de verdade e ajuda pessoas. Pessoas concretas, vivas. Milhões de pessoas! Pronto, ponto final. :-))</p><div class="section" style="background-color: hsl(170, 33%, var(--autocolor-background-lightness, 95%));"><p>P.S. Também é possível considerar o MMM como uma espécie de banco popular p2p. Honesto e justo, sem juros abusivos. Sem essa maldita "usura". Por que a cobram? A usura foi condenada e desprezada em todos os tempos e entre todos os povos. E agora isso é norma. Um empresário pega um empréstimo no banco. Por que cobram juros dele? Ele quer criar algo útil para a sociedade, para toda a sociedade, inclusive para os banqueiros? Deveriam dar-lhe benefícios por isso, e não esfolá-lo vivo!</p></div><div class="section" style="background-color: hsl(323, 50%, var(--autocolor-background-lightness, 95%));"><p>No entanto, enfatizo especialmente que é "uma espécie de". O MMM não se enquadra na definição formal de atividade bancária. No MMM não há "depósitos", não há condições de prazo ou reembolso. Além disso, todo o dinheiro está nas contas dos próprios participantes. Portanto, não. Formalmente, o MMM não é um banco. E, consequentemente, não são necessárias licenças para sua atividade. Todas as licenças já existem nos bancos cujos serviços os participantes utilizam.</p></div><p><strong>Nós Podemos Fazer Muito!</strong></p><div class="section" style="background-color: hsl(236, 74%, var(--autocolor-background-lightness, 95%));"><p>Registrando-se no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobal">@Mavrodi_robot</a></strong></p></div><div class="section" style="background-color: hsl(55,  86%, var(--autocolor-background-lightness, 95%));"><p><a href="index.html" class=""><strong>PARA A PÁGINA INICIAL</strong></a></p></div>
-</article>
-</div>
+  <div class="wrap">
+    <article>
+      <h1>O que é o MMM?</h1>
+      <article class="article__content text" itemprop="articleBody"><div class="callout" style="border-left-color:#4a6fa5; background:#e8eef7;"><!-- --><p>Registrando-se no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobal">@Mavrodi_robot</a></strong></p></div><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><p><a class="" href="https://teletype.in/@mmm2.0_admin/index"><strong>PARA A PÁGINA INICIAL</strong></a></p></div><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><a name="e8Ff"></a><div class="wrap"><!-- --><img class="" id="e8Ff" src="ab0a2f8e-3195-4b63-96d8-489b6e3c3c2c.jpeg"/><!-- --></div><figcaption itemprop="description"><!-- -->Uma rede viva e estruturada, baseada na confiança e na ajuda mútua; um sistema automatizado absolutamente descentralizado, no qual um bot do Telegram conecta os participantes diretamente uns aos outros; ausência de bancos de dados únicos, servidores e centros de controle. Dispersão total!</figcaption></figure><div class="callout" style="border-left-color:#6b6257; background:#f0e9dc;"><!-- --><p>O que é o MMM? Uma união voluntária e informal de pessoas, muitos e muitos milhões de pessoas simples e comuns do mundo todo. São pessoas das mais variadas idades, nacionalidades, religiões, convicções e posições sociais. Homens e mulheres. Europeus e americanos, russos e australianos, chineses, Os brasileiros e indianos. Brancos, negros, amarelos... Mas todos eles são unidos por uma coisa só: o desejo de ajudar uns aos outros! Fazer o bem. "Amai o próximo"! Ajude-o. Não fale – faça!</p></div><p><a name="F7zG"></a>Em sua essência, o MMM é uma organização beneficente em sua forma mais pura e original, limpa de toda a escória de formalidades desnecessárias e de burocracias que matam tudo o que é vivo e que são absolutamente inadequadas em um assunto tão sagrado e puro quanto a caridade e a ajuda mútua. Em nosso mundo moderno, abafado e excessivamente regulamentado, um mundo de desconfiança e suspeita generalizadas, todos esses contratos, assinaturas e carimbos parecem algo indispensável e até óbvio: "Mas como seria diferente? Senão, vão me enganar. Se não houver contrato. Como alguém pode não enganar, se tiver a oportunidade completa? Com certeza vai enganar". Sim, com certeza. Se você esperar isso dele. Ofendê-lo com desconfiança. Ao propor um contrato, você está basicamente dizendo à pessoa: "Eu não confio em você, você é um ladrão e um vigarista. E, para que você não me engane, firmo um contrato com você, onde descrevo em inúmeros parágrafos e cláusulas todos os casos e cenários possíveis e impossíveis. Agora tente me enganar!". Você já parou para pensar? Ao fazer isso, você dá à pessoa o direito moral de enganá-lo. Se conseguir. Se encontrar uma brecha em seus inúmeros parágrafos e cláusulas. Basicamente, isso também faz parte do contrato. Essa brecha. Encontre – e você está certo. Tudo estritamente conforme o contrato! E de moralidade aqui não se fala nem um pouco. O homem é o lobo do homem! Que moralidade, quando se trata de DINHEIRO?! Não me façam rir, senhores.</p><p><a name="hgd1"></a>No MMM, nada disso existe em princípio. Nem de perto! O MMM é um retorno às origens, aos valores humanos verdadeiros, globais e autênticos. É um tipo de sistema de ajuda mútua inicial, "verdadeiro", honesto e justo. Como qualquer pessoa imagina em seu coração.</p><p><a name="wHYp"></a>Por exemplo, na família. Você não exige carimbos e assinaturas, exige? Tudo é baseado na confiança, e não em "garantias e obrigações", certo? (Caso contrário, como viver?) Exatamente da mesma forma aqui. O MMM é, de certa forma, uma gigantesca caixinha virtual coletiva abstrata, na qual todos depositam dinheiro. E depois retiram conforme a necessidade. Não arrancam, não agarram com as duas mãos (mãos enormes! garras! vorazes! :-)), mas simplesmente – retiram. Porque, na verdade, uma pessoa não precisa de tanto dinheiro assim. O importante é a consciência de que ele está lá. A confiança no amanhã! O MMM justamente dá às pessoas essa confiança. Torna a pessoa livre! Financeiramente. Presenteia-a com uma sensação incomparável de solidariedade. A consciência de que, em um momento difícil, você será ajudado. Com certeza será ajudado!! E isso significa muito, mas muito mesmo, para uma pessoa. Quase tudo, na verdade! "Hoje você ajuda – amanhã ajudam você!" Esse é o lema do nosso Sistema.</p><div class="callout" style="border-left-color:#6b6257; background:#f0e9dc;"><!-- --><p>E sabem? Vou contar um segredo. Prestar ajuda a pessoas completamente desconhecidas também é muito prazeroso. Muitas vezes, até mais prazeroso do que recebê-la. Não acredita? Então experimente! Vai ver.<br/>(Afinal, a pessoa gosta de se sentir boa e gentil – gosta! Isso está nela desde o início. E graças a Deus. :-))</p></div><p><a name="ukp1"></a>Certo. Chega de lirismo. Vamos aos negócios. Senão ficamos só conversando. :-))</p><div class="callout" style="border-left-color:#6b6257; background:#f0e9dc;"><!-- --><p>Então. Ao entrar no MMM, você deve entender o seguinte. As pessoas aqui praticam a caridade, prestam ajuda umas às outras. Sem-qualquer-garantia-ou-promessa-de-retorno! Não porque querem obter algum tipo de vantagem, lucrar com dividendos etc., mas simplesmente assim. Sem motivo. Porque são boas e gentis. Porque são – Pessoas. Porque querem fazer o bem, sentem uma necessidade urgente disso. Ajudar os necessitados, os socialmente desprotegidos, ajudar quem está passando mal agora, pior do que elas mesmas. Essa é uma necessidade perfeitamente natural de qualquer ser humano, fazer o bem, não é? Caso contrário, ele já não é mais um Ser Humano.</p></div><p><a name="F8BW"></a>Consequentemente! Aqui não há nenhuma garantia ou promessa. De vantagens patrimoniais ou coisas do tipo. Nenhuma! Absolutamente! Nem de forma explícita, nem implícita. Nenhuma vantagem patrimonial é prometida a você aqui! (Entenderam todos? Ou preciso repetir? :-)) O fato de você ter prestado ajuda a alguém não significa, de forma alguma, que ela será prestada a você depois. Talvez sim, talvez não. Caridade! É um assunto estritamente voluntário. Se quiserem, ajudam. Mas só se quiserem. Portanto, não se deve entender o lema do Sistema – "Hoje você ajuda – amanhã ajudam você!" – de forma literal. Como se a ajuda fosse obrigatória. Nada disso! Não há nada de obrigatório aqui. Ele é metafórico. E não contém promessas. No MMM, elas simplesmente não existem. Repito pela centésima, milésima vez! Não, não e não! Não há promessas aqui! Agora, sempre e para todo o sempre. Amém.</p><p><a name="JX8C"></a>Em outras palavras. Se você veio aqui sem intenções puras, não com o objetivo de fazer o bem às pessoas, de praticá-lo! – simplesmente assim! – de forma desinteressada, alegre e sincera! – mas veio com o objetivo de agarrar tudo, por ganância, por algum tipo de "lucro" e vantagem – este não é o seu lugar. Pronto! Tudo de bom e até a próxima. Mas não neste mundo.</p><p><a name="Goih"></a>Certo. Agora. Vamos em frente.<br/>Como tudo funciona? "Funciona" no sentido de que qualquer comunidade, mesmo que informal, tem suas próprias regras de comportamento, únicas e exclusivas. É isso que a torna uma comunidade. Única e diferente de todas as outras. É sobre isso que vamos falar agora.</p><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><p>Então, quais são essas "regras"? Resumidamente, cada participante tem uma espécie de classificação (Mavro abstratos), que determina o grau de sua utilidade para o Sistema. O valor da classificação determina o valor da ajuda que o participante pode solicitar. Bem, ele pode, em princípio, solicitar qualquer valor, mas é improvável que alguém lhe preste ajuda se sua classificação for insuficiente. Uma pessoa, digamos, um homem adulto e saudável, que acabou de ajudar alguém com um dólar e logo em seguida solicita ajuda para si... de um milhão! Isso parece... um pouco... estranho. Você entende. Até a caridade é seletiva. É melhor eu transferir meu suado dinheiro para uma senhorinha que ajudou alguém no mês passado com sua moedinha e agora pede às pessoas um apoio aproximadamente igual – ou talvez um pouco maior!</p></div><div class="callout" style="border-left-color:#6b6257; background:#f0e9dc;"><!-- --><p><strong>Do que depende a classificação?</strong> Do grau de utilidade do participante para o Sistema, repito. E essa utilidade é determinada principalmente pelo valor que ele está disposto a prestar (ou já prestou) como ajuda a outros participantes do Sistema. E também pelo comportamento do participante. Se ele declara antecipadamente que não vai solicitar ajuda por vários meses, que está tudo bem com ele, então, obviamente, sua classificação presumivelmente aumentará. Afinal, durante todo esse tempo, o dinheiro dele estará ajudando outras pessoas.</p></div><p><a name="mOgG"></a>Com o tempo, a classificação geralmente aumenta. O que também faz sentido. Quanto mais tempo uma pessoa não solicita ajuda para si, maior valor ela representa para o Sistema. A partir de convites para o sistema de novas pessoas que prestam ajuda, sua classificação também aumentará presumivelmente. Assim, você beneficia a causa comum. Pode, no entanto, cair. Se, por exemplo, simplesmente não houver dinheiro no Sistema. Mas, de qualquer forma, você pode ler com mais detalhes sobre classificações <a class="" href="https://teletype.in/@mmm2.0_admin/PRAVILA"><strong>nas "regras".</strong></a> Aqui, um aprofundamento adicional em detalhes – que são, na verdade, puramente técnicos – dificilmente seria apropriado. A ideia geral está clara, e os detalhes você lê depois.</p><p><a name="XyOL"></a><strong>Por que um esquema tão complicado e... pouco elegante, digamos assim?</strong> Para um assunto tão simples e claro como a caridade? Parecia que, bem, se as pessoas querem ajudar umas às outras – que ajudem. Conforme suas possibilidades e sem todas essas regras e classificações. Por que complicar? E tornar tudo tão complexo? Vocês mesmos disseram: "retorno às origens!.. como na família!.. contrato é uma ofensa à desconfiança!.."</p><p><a name="nhrQ"></a>"Sem todas essas regras e classificações". Amanhã mesmo aparece um espertinho, o mais infeliz e necessitado, que envia a todos pedidos chorosos (bem, súplicas :-)), esvazia completamente o caixa e some sem deixar rastro. E aí? Sim, família. Mas até em família tem o seu "patinho feio". Sim, confiança. Porém: confie, mas confira. Sabedoria das eras. Introduza classificações. Realmente não temos contratos e papéis, mas para que as pessoas pelo menos vejam quem está pedindo ajuda a elas. Que tipo de pessoa é. :-)) Isso é normal? E aí que cada um decida por si. Prestar ajuda ou não. A caridade, sem dúvida, é voluntária.</p><p><a name="1K5b"></a>E, de qualquer forma. O objetivo era criar um Sistema funcional. Uma organização beneficente informal verdadeira e viva (e não apenas no papel). Esse objetivo foi alcançado. Pronto! Alguma pergunta? Você consegue fazer melhor? Elegante e bonito? E sem todas essas classificações? Então, boa sorte e vá em frente. Tente. O MMM funciona de verdade e ajuda pessoas. Pessoas concretas, vivas. Milhões de pessoas! Pronto, ponto final. :-))</p><div class="callout" style="border-left-color:#4a8a6f; background:#e8f3ed;"><!-- --><p>P.S. Também é possível considerar o MMM como uma espécie de banco popular p2p. Honesto e justo, sem juros abusivos. Sem essa maldita "usura". Por que a cobram? A usura foi condenada e desprezada em todos os tempos e entre todos os povos. E agora isso é norma. Um empresário pega um empréstimo no banco. Por que cobram juros dele? Ele quer criar algo útil para a sociedade, para toda a sociedade, inclusive para os banqueiros? Deveriam dar-lhe benefícios por isso, e não esfolá-lo vivo!</p></div><div class="callout" style="border-left-color:#9b6b8a; background:#f7eef4;"><!-- --><p>No entanto, enfatizo especialmente que é "uma espécie de". O MMM não se enquadra na definição formal de atividade bancária. No MMM não há "depósitos", não há condições de prazo ou reembolso. Além disso, todo o dinheiro está nas contas dos próprios participantes. Portanto, não. Formalmente, o MMM não é um banco. E, consequentemente, não são necessárias licenças para sua atividade. Todas as licenças já existem nos bancos cujos serviços os participantes utilizam.</p></div><p><a name="or96"></a><strong>Nós Podemos Fazer Muito!</strong></p><div class="callout" style="border-left-color:#4a6fa5; background:#e8eef7;"><!-- --><p>Registrando-se no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobal">@Mavrodi_robot</a></strong></p></div><div class="callout" style="border-left-color:#b38b4d; background:#f5f0e6;"><!-- --><p><a class="" href="https://teletype.in/@mmm2.0_admin/index"><strong>PARA A PÁGINA INICIAL</strong></a></p></div></article>
+    </article>
+  </div>
 </body>
 </html>
