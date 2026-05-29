@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Código de participante MMM</title>
+  <style>
+:root {
+  --bg: #f9f7f2;
+  --text: #1f1f1f;
+  --text-muted: #4a4640;
+  --accent: #2a4a6f;
+  --border: #d9d4c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1816;
+    --text: #e8e4d9;
+    --text-muted: #a39a8c;
+    --accent: #8aa4c2;
+    --border: #3a3630;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.82;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+article {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.4em;
+}
+
+h2, h3, h4 {
+  font-weight: 700;
+  margin: 1.8em 0 0.6em;
+}
+
+p {
+  margin: 0 0 1.15em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+figure {
+  margin: 1.2em 0;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+figcaption {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 0.4em 0 !important;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* === Правила для компактных видео ===
+   Базовый маленький отступ + сильное правило для соседних элементов.
+   Отдельная нейтрализация .wrap (основная причина больших пустот в старых версиях).
+*/
+.video-container {
+  margin: 0.4em 0 !important;
+}
+
+* + .video-container {
+  margin-top: 0.3em !important;
+}
+
+.wrap > .video-container,
+.wrap > img,
+.wrap figure > img {
+  margin: 0.4em 0 !important;
+}
+
+/* Немного подрезаем маржины у типичных соседей видео (заголовки, фигуры) */
+h1, h2, h3, h4, h5, h6,
+p, figure {
+  margin-bottom: 0.5em;
+}
+
+.callout {
+  margin: 1.8em 0;
+  padding: 1.1em 1.3em;
+  border-radius: 6px;
+  border-left: 5px solid var(--accent);
+  background: #f0e9dc;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Цветные варианты callout (светлая тема) */
+.callout-blue   { border-left-color: #4a6fa5; background: #e8eef7; }
+.callout-amber  { border-left-color: #b38b4d; background: #f5f0e6; }
+.callout-purple { border-left-color: #9b6b8a; background: #f7eef4; }
+.callout-green  { border-left-color: #4a8a6f; background: #e8f3ed; }
+.callout-neutral { border-left-color: #6b6257; background: #f0e9dc; }
+
+/* Заголовки внутри callout не должны сильно раздувать рамку */
+.callout h1,
+.callout h2,
+.callout h3,
+.callout h4,
+.callout h5 {
+  margin: 0.2em 0 0.35em;
+  line-height: 1.25;
+  font-size: 1.1em;
+}
+
+/* Тёмная тема для рамок — чтобы не светились ярко */
+@media (prefers-color-scheme: dark) {
+  .callout {
+    background: #2c2a26;
+  }
+  .callout-blue   { background: #1e2a3a; border-left-color: #7aa0d1; }
+  .callout-amber  { background: #2f2a1f; border-left-color: #d4b37a; }
+  .callout-purple { background: #2a2430; border-left-color: #c48fb3; }
+  .callout-green  { background: #1f2a24; border-left-color: #7ab89a; }
+  .callout-neutral { background: #2c2a26; border-left-color: #a89f90; }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 2.4em 0;
+}
+
+@media (max-width: 600px) {
+  .wrap { padding: 40px 18px 80px; }
+  body { font-size: 17px; }
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article>
+      <h1>Código de participante MMM</h1>
+      <article class="article__content text" itemprop="articleBody"><!--[--><div class="callout callout-blue"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[-->Registo no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobalStatic"><!--[-->@Mavrodi_robot<!--]--></a></strong><!--]--></p><!--]--></div><div class="callout callout-amber"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[--><strong><a class="" href="index.html"><!--[-->PARA A PÁGINA INICIAL<!--]--></a></strong><!--]--></p><!--]--></div><hr/><div class="callout callout-neutral"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[-->Clique no link para ler o <strong><a class="" href="idea.html"><!--[-->A ideologia do MMM<!--]--></a></strong><!--]--></p><!--]--></div><hr/><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><a name="06R7"></a><!--[--><!--]--><!-- --><!--[--><img class="" id="06R7" src="597d2146-2230-4cae-af5c-4bfee3acf6e5.jpeg"/><!--]--><!-- --><!--[--><!--[--><figcaption itemprop="description"><!-- --><!--[--><!--]--><!--[-->Rede estruturada viva, baseada na confiança e ajuda mútua; sistema automatizado absolutamente descentralizado, no qual o bot do Telegram conecta os participantes diretamente uns aos outros; ausência de bancos de dados únicos, servidores e centros de controle. Total dispersão!<!--]--></figcaption><!--]--><!--]--></figure><div class="callout callout-blue"><!-- --><!--[--><!--]--><!--[--><h3><!--[--><!--]--><!--[--><strong>Em essência, todo o Código consiste em apenas dois pontos:</strong><!--]--></h3><!--]--></div><div class="callout callout-neutral"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[--><strong>1.Todas as pessoas são boas. Honestas e bondosas.</strong><!--]--></p><!--]--></div><div class="callout callout-green"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[--><strong>2.É preciso confiar nas pessoas. Não tenham medo de ser enganados, temam enganar a si mesmos. No primeiro caso, vocês perderão apenas dinheiro, e no segundo – a si mesmos.</strong><!--]--></p><!--]--></div><hr/><p><a name="WR0Y"></a><!--[--><!--]--><!--[--><em>A pedra angular, o alicerce sobre o qual se ergue o MMM renascido, Nossa Sistema de ajuda mútua Sergei Mavrodi: todas as pessoas são boas. Honestas e bondosas. E é preciso confiar nelas.</em><!--]--></p><p><a name="rb0E"></a><!--[--><!--]--><!--[--><em>Já a premissa básica sobre a qual toda a sociedade moderna está construída é exatamente a oposta: todas as pessoas são más! Más e desonradas. E não se pode confiar nelas. É exatamente por isso que as relações contratuais formais são a base das bases da sociedade moderna. (Por isso o MMM renascido também é chamado de ANTISSISTEMA).</em><!--]--></p><p><a name="vhuv"></a><!--[--><!--]--><!--[--><em>Vocês nunca refletiram sobre o que é um contrato e para que ele é necessário, afinal? Que, ao assinar um contrato formal com um parceiro, você, em essência, atesta que ambos são mentirosos e trapaceiros, prontos para enganar um ao outro na primeira oportunidade? Que a simples palavra de honra de vocês não vale nada. E que apenas o medo do castigo pode de alguma forma impedir que ambos se enganem mutuamente. Daí – todos esses inúmeros itens e parágrafos no contrato. O desejo de prever tudo, de se precaver contra quaisquer truques e não se deixar enganar pelo seu desonrado parceiro trapaceiro. Mas se você não confia na pessoa, por que razão ela confiaria em você? Como resultado, ninguém confia em ninguém. O contrato é: o homem é o lobo do homem.</em><!--]--></p><p><a name="8Jmc"></a><!--[--><!--]--><!--[--><em>Entretanto, ainda Cristo, dois mil anos atrás, disse no Sermão da Montanha: "Seja, porém, o vosso falar: Sim, sim; não, não; pois o que passa disto vem do maligno" (Mat. 5:33-37). E isso está certo. Pois qualquer coisa "além disso" já é um reconhecimento de que você é um mentiroso, que não tem honra nenhuma, e que a sua simples "palavra de honra" não vale e não significa nada.</em><!--]--></p><div class="callout callout-neutral"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[--><em>O MMM Renascido é a única parte da sociedade moderna onde não há absolutamente nenhuma relação formal entre as pessoas. Onde simplesmente se confia nas pessoas. Como em uma grande família. Isso parece uma utopia completa (confiar?! no mundo moderno??!!), mas isso, no entanto, não é de forma alguma uma utopia. E o próprio fato do renascimento do MMM é a melhor confirmação disso. As pessoas anseiam por relações humanas normais! Elas se sentem desconfortáveis no mundo moderno, cruel e implacável.</em><!--]--></p><!--]--></div><p><a name="eIrC"></a><!--[--><!--]--><!--[--><em>Simplesmente nos martelam na cabeça desde a infância que as pessoas são más, e que não se pode confiar nelas. Mas, na verdade, as pessoas são boas, e confiar nelas – é possível! É necessário!! Aí está você, que a vida toda não confiou em ninguém, desconfiava de todos, e o que resultou no final? Prosperou muito? A desconfiança mútua divide as pessoas, assim é mais fácil controlá-las. É para isso que os contratos são necessários. Para – subjugar. Eles apenas criam a ilusão de justiça e proteção. Quanto vocês poderão conseguir com a ajuda de um contrato, digamos, de um banco? Nada! Já o banco, com a ajuda desse mesmo contrato, jogará vocês com os filhos na rua e tirará a última camisa. Vocês ficarão completamente no poder dele. E assim é em tudo. Tudo isso é uma mentira enorme, gigantesca. Somos manipulados. E de forma tão hábil que nós mesmos não percebemos. Mas, apesar disso, é assim.</em><!--]--></p><div class="callout callout-purple"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[--><em><strong>Nosso Antissistema – é a porta para um novo mundo. Entrem nele e não tenham medo. Abram os olhos! Façam a sua escolha. Não deixem que os seus filhos também cresçam como escravos!</strong></em><!--]--></p><!--]--></div><p><a name="wa5t"></a><!--[--><!--]--><!--[--><strong><em>Nós Podemos Muito! Juntos!!</em></strong><!--]--></p><hr/><div class="callout callout-neutral"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[-->Clique no link para ler o <strong><a class="" href="idea.html"><!--[-->A ideologia do MMM<!--]--></a></strong><!--]--></p><!--]--></div><hr/><div class="callout callout-blue"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[-->Registo no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobalStatic"><!--[-->@Mavrodi_robot<!--]--></a></strong><!--]--></p><!--]--></div><div class="callout callout-amber"><!-- --><!--[--><!--]--><!--[--><p><!--[--><!--]--><!--[--><strong><a class="" href="index.html"><!--[-->PARA A PÁGINA INICIAL<!--]--></a></strong><!--]--></p><!--]--></div><!--]--></article>
+    </article>
+  </div>
+</body>
+</html>

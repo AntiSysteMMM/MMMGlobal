@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AVISO!</title>
+<style>
+:root {
+  --bg: #f9f7f2;
+  --text: #1f1f1f;
+  --text-muted: #4a4640;
+  --accent: #2a4a6f;
+  --border: #d9d4c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1816;
+    --text: #e8e4d9;
+    --text-muted: #a39a8c;
+    --accent: #8aa4c2;
+    --border: #3a3630;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.82;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+article {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.4em;
+}
+
+h2, h3, h4 {
+  font-weight: 700;
+  margin: 1.8em 0 0.6em;
+}
+
+p {
+  margin: 0 0 1.15em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+figure {
+  margin: 1.2em 0;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+figcaption {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 0.4em 0 !important;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* === Правила для компактных видео ===
+   Базовый маленький отступ + сильное правило для соседних элементов.
+   Отдельная нейтрализация .wrap (основная причина больших пустот в старых версиях).
+*/
+.video-container {
+  margin: 0.4em 0 !important;
+}
+
+* + .video-container {
+  margin-top: 0.3em !important;
+}
+
+.wrap > .video-container,
+.wrap > img,
+.wrap figure > img {
+  margin: 0.4em 0 !important;
+}
+
+/* Немного подрезаем маржины у типичных соседей видео (заголовки, фигуры) */
+h1, h2, h3, h4, h5, h6,
+p, figure {
+  margin-bottom: 0.5em;
+}
+
+.callout {
+  margin: 1.8em 0;
+  padding: 1.1em 1.3em;
+  border-radius: 6px;
+  border-left: 5px solid var(--accent);
+  background: #f0e9dc;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Цветные варианты callout (светлая тема) */
+.callout-blue   { border-left-color: #4a6fa5; background: #e8eef7; }
+.callout-amber  { border-left-color: #b38b4d; background: #f5f0e6; }
+.callout-purple { border-left-color: #9b6b8a; background: #f7eef4; }
+.callout-green  { border-left-color: #4a8a6f; background: #e8f3ed; }
+.callout-neutral { border-left-color: #6b6257; background: #f0e9dc; }
+
+/* Заголовки внутри callout не должны сильно раздувать рамку */
+.callout h1,
+.callout h2,
+.callout h3,
+.callout h4,
+.callout h5 {
+  margin: 0.2em 0 0.35em;
+  line-height: 1.25;
+  font-size: 1.1em;
+}
+
+/* Тёмная тема для рамок — чтобы не светились ярко */
+@media (prefers-color-scheme: dark) {
+  .callout {
+    background: #2c2a26;
+  }
+  .callout-blue   { background: #1e2a3a; border-left-color: #7aa0d1; }
+  .callout-amber  { background: #2f2a1f; border-left-color: #d4b37a; }
+  .callout-purple { background: #2a2430; border-left-color: #c48fb3; }
+  .callout-green  { background: #1f2a24; border-left-color: #7ab89a; }
+  .callout-neutral { background: #2c2a26; border-left-color: #a89f90; }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 2.4em 0;
+}
+
+@media (max-width: 600px) {
+  .wrap { padding: 40px 18px 80px; }
+  body { font-size: 17px; }
+}
+  </style>
+</head>
+<body>
+<div class="wrap">
+<article>
+<h1>AVISO!</h1>
+<article class="article__content text" itemprop="articleBody"><h1><a name="sMu0"></a>AVISO!</h1><div class="callout callout-blue"><!-- --><p>Registo no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobal_static">@Mavrodi_robot</a></strong></p></div><div class="callout callout-amber"><!-- --><p><a class="" href="index.html"><strong>PARA A PÁGINA PRINCIPAL</strong></a></p></div><p><a name="1OMK"></a>"Só há duas maneiras de viver a vida.</p><p><a name="CYDF"></a>A primeira é como se os milagres não existissem.</p><p><a name="5ohP"></a>A segunda é como se tudo fosse um milagre."</p><p><a name="w5pe"></a><strong>Albert Einstein</strong></p><p><a name="pn6T"></a>O mundo é ruim? Então faça-o melhor!</p><p><a name="wPxH"></a><strong>Sergey Mavrodi</strong></p><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><a name="YRMU"></a><!-- --><img class="" id="YRMU" src="749b5798-3c0f-4e1a-b9cd-50728603e490.png"/><!-- --><figcaption itemprop="description"><!-- -->Uma rede viva e estruturada, baseada na confiança e na ajuda mútua; um sistema automatizado absolutamente descentralizado, no qual um bot do Telegram conecta os participantes diretamente uns aos outros; ausência de bancos de dados, servidores e centros de controle unificados. Dispersão total!</figcaption></figure><hr/><p><a name="CTmm"></a><em>"Ausência de bancos de dados, servidores e centros de controle unificados. Dispersão! Uma teia. É exatamente isso que torna o Sistema aquilo que eu originalmente planejei que fosse. Indestrutível e invencível. Por nenhum serviço secreto e por nenhuma autoridade. Do mundo inteiro. Ajam! Ajam! ajam! ajam! Nós Podemos Muito! Juntos".</em><br/> Sergey Panteleevich Mavrodi</p><hr/><h4><a name="Для-начала-посмотрите-это-видео:"></a>Para começar, assista a este vídeo:</h4><figure class="m_column"><a name="KOIv"></a><div class="video-container"><iframe allow="accelerometer; autoplay; encrypted-media; clipboard-write; gyroscope; picture-in-picture; web-share; camera" allowfullscreen="" class="embed-youtube" frameborder="0" id="KOIv" scrolling="no" src="https://www.youtube.com/embed/pWRNtFn1fa8"></iframe></div><!-- --><figcaption itemprop="description"><!-- -->Já viram? De quem é isso? Das pulgas? Ou de nós? Dos que nasceram em um frasco?</figcaption></figure><hr/><div class="callout callout-neutral"><!-- --><p><strong>Atenção!</strong> O MMM Global é uma associação informal de pessoas de todo o mundo, uma caixa global de ajuda mútua. No MMM Global, as pessoas ajudam umas às outras de forma gratuita (sem garantias nem promessas) com seus próprios fundos, apenas na esperança de receber mais ajuda do que prestaram.</p></div><div class="callout callout-amber"><!-- --><p>‼️<strong>A participação no MMM Global envolve risco absoluto: você pode transferir seus fundos para outra pessoa (um participante do MMM Global) e pode acabar não recebendo nada de volta, sem nenhuma explicação!</strong></p></div><p><a name="6W9J"></a>Eu, Danil Yusupov, Não lhe dou garantias, ocultas ou explícitas, de que receberá absolutamente nada! No MMM Global não há condições de prazo ou reembolso, não há contratos (vocês transferem seus fundos gratuitamente, sem garantias nem promessas e diretamente para outras pessoas, o que não é proibido por lei).</p><div class="callout callout-green"><!-- --><p>O MMM Global não possui nenhuma pessoa jurídica, consequentemente, não há uma conta única para onde fluem os fundos de todos os participantes — aqui existem apenas pessoas (participantes do MMM Global) que transferem seus fundos gratuita (sem garantias nem promessas) e diretamente uns aos outros: de sua carteira de criptomoedas para a carteira de criptomoedas de outra pessoa. O que, repito, é absolutamente legal (aliás, é praticamente impossível proibir por lei a transferência gratuita (sem garantias nem promessas) de fundos próprios para outras pessoas).</p></div><div class="callout callout-neutral"><!-- --><p>Na verdade, este é um sistema de Assistência Mútua em sua forma mais pura.</p></div><p><a name="ujy5"></a>Aqui eu apenas escrevo <strong>e expresso minha opinião pessoal, faço algumas suposições</strong>, compartilho meus pensamentos, não garanto nem prometo nada, não presto nenhum serviço e não tento vender nada a ninguém. E, aliás, convido a todos a fugirem daqui o mais rápido possível. Por que diabos ajudar uns aos outros!? Enfim, fujam logo e nunca mais voltem aqui! E NÃO PARTICIPEM do MMM Global!</p><hr/><h3><a name="eC7X"></a><strong>Não fugiram? Continuem lendo!
+
+Ou não. Olha só mais uma coisa. Um pequeno aparte.</strong></h3><p><a name="BOWW"></a><em>Antes de tudo. Para sua informação. Nós ainda vivemos, até hoje, em uma sociedade escravocrata. Assim como há milhares de anos. Nada mudou substancialmente desde então. Exceto que agora as correntes são econômicas. Financeiras, para ser mais preciso. Essa é a única diferença. No mais, tudo continua igual. Existem escravos e existem Os anfitriões. Os anfitriões são aqueles que imprimem o dinheiro. Surpresos?</em></p><figure class="m_column"><a name="2Trk"></a><div class="video-container"><iframe allow="accelerometer; autoplay; encrypted-media; clipboard-write; gyroscope; picture-in-picture; web-share; camera" allowfullscreen="" class="embed-youtube" frameborder="0" id="2Trk" scrolling="no" src="https://www.youtube.com/embed/tYPkyDFEh9g"></iframe></div><!-- --><figcaption itemprop="description"><!-- -->Sergei Mavrodi sobre a escravidão financeira</figcaption></figure><p><a name="pY3c"></a><em><strong>Continuando. O que é o dinheiro?</strong> Nada! Nihil. Um fantasma. O vazio! Apenas papéis coloridos, lindamente decorados, com marcas d'água, brasões e ilustrações. (Geralmente retratos de grandes homens. Para parecer mais sólido. :-)) Eles não são lastreados em absolutamente nada e são impressos pelos Os anfitriões em qualquer quantidade e a seu bel-prazer.</em></p><p><a name="REVE"></a><em>Os anfitriões então distribuem esses papéis aos escravos como "pagamento pelo trabalho". E ainda os repreendem paternalmente, com um ar sério e importante, dizendo que "o dinheiro deve ser ganho honestamente". E os escravos obedecem. Zumbificados desde o berço por todos os tipos de livros didáticos "corretos", livrinhos, filmes, meios de comunicação de massa, enfim, por toda essa máquina estatal gigantesca, bem azeitada e impiedosamente eficiente de lavagem cerebral (até os pais participam involuntariamente dessa "socialização" — transformando com as próprias mãos seus filhos puros e inocentes nos mais autênticos escravos!). Os escravos não conhecem outra coisa, e lhes parece que o mundo é assim e que não pode ser de outro jeito. Mas pode ser diferente!!</em></p><p><a name="dthX"></a><em>O que é uma "pirâmide financeira"? Por que as "pirâmides" são anatemizadas em todos os lugares, em todos os Estados sem exceção? Mesmo nos mais leais, livres e democráticos? Por que lutam contra elas de forma tão implacável, persistente e consistente? Jogos de azar e drogas são permitidos em alguns países! mas as "pirâmides" são proibidas em todos os lugares! Em toda parte. Por quê? Há algo nisso de diretamente misterioso e místico. Nunca pararam para pensar?</em></p><p><a name="ETvZ"></a><em>Então, por quê? Porque "as pessoas vão sofrer"? Besteira!! Quem se importa com as "pessoas"? Essa gentalha, esse protoplasma que come e se reproduz, esse rebanho humano de bilhões! Esses escravos mudos, oprimidos e submissos! Se eles vão "sofrer" ou não. Quem se importa com isso?!</em></p><p><a name="7sxo"></a><em>Sem falar que, desde quando eles teriam que sofrer? É apenas mais um mito, um dos muitos, da série "ganhar dinheiro honestamente". A ideia de que as pessoas numa "pirâmide" obrigatoriamente devem "sofrer". E que a própria "pirâmide" deve desmoronar! (E quando? Quando envolver o mundo todo? Bem, enquanto você tiver pelo menos um conhecido não envolvido, durma tranquilo. E isso também não é verdade. Ela não vai desmoronar! Pelo contrário, vai ficar ainda mais estável. :-))</em></p><p><a name="GLmm"></a><em>Então por que, afinal? De onde vem tanto ódio e uma rejeição tão furiosa? Hein? Querem saber? Querem que eu revele o maior e mais terrível segredo burguês? Só que... shhh!.. Nem uma palavra a ninguém! Combinado? Tudo bem, então escutem. :-))</em></p><div class="callout callout-neutral"><!-- --><p><em>PORQUE AS "PIRÂMIDES" PRODUZEM... DINHEIRO!!! Sim, sim, sim, é exatamente isso! DINHEIRO!! Do nada, do ar! Exatamente como os próprios Os anfitriões o produzem do nada, do ar. E também com a ajuda de "pirâmides"! Não é à toa que o dólar é uma "pirâmide"! Simplesmente não existem outros mecanismos para a produção de dinheiro. Nenhum! Apenas "pirâmides financeiras". Não acreditam? Então me digam uma única moeda mundial que não seja uma "pirâmide". Uma única! O euro?.. a libra?.. o yuan?.. Hein?.. O franco suíço, talvez?.. O quê?!</em></p></div><p><a name="rHYa"></a><em>Sim, as "pirâmides" produzem dinheiro. E isso só é permitido Os anfitriões. É a sua prerrogativa sagrada e inalienável e o seu monopólio inabalável. O direito de produzir dinheiro é o que os torna Os anfitriões. E aqui, quem o produz são os escravos!!!</em></p><p><a name="zmSV"></a><em>Como resultado, tudo desmorona. Rompe-se instantaneamente toda aquela teia pegajosa de mentiras e hipocrisia que envolve o ser humano de forma cuidadosa, meticulosa e incansável a cada minuto, a cada segundo, desde o momento de seu nascimento até a sua morte. O véu cai. A ilusão se dissipa. O ser humano descobre de repente que a jaula financeira está escancarada! Ele é livre! No começo, ele apenas se espanta e não acredita em si mesmo: como é que ele recebe dinheiro assim, de graça, por nada? E ele não precisa mais ficar sentado nessa jaula? "Trabalhar honestamente"? Isso é impossível por princípio, não pode ser! A vida toda, desde o berço, lhe disseram que isso é impossível!! Que é preciso labutar!.. trabalhar com o suor do rosto!.. (para quem? :-)) ganhar!.. honestamente!... Isso é o certo, isso é justo! E só então você recebe algo. Algo lhe será dado. (Jogado! Das sobras. :-)) E agora, de repente, descobre-se que não é preciso?! Que isso não é nem um pouco obrigatório?! Como assim??!!.. Depois ele começa a pensar. Então quer dizer que o dinheiro não é a medida do trabalho? Já que podem simplesmente distribuí-lo, jogá-lo, dá-lo de presente à vontade? E o mundo não desmorona por causa disso! E o que são, então? Se não são uma medida do trabalho?.. Será que é mesmo... apenas papel? Apenas papéis coloridos??!! Em seguida, ele olha ao redor e vê pessoas ao seu lado, ainda trabalhando de forma estúpida e monótona, sem levantar a cabeça, nas jaulas vizinhas... por esses papéis... por esses papéis inúteis... Pessoas que até ontem eram seus amigos, parentes... E hoje um abismo os separa. Eles ainda são escravos, e ele não! Ele provou o fruto proibido da liberdade! Ele descobriu o que é sentir-se livre. Sentir-se Humano! E disso ele nunca mais vai se esquecer.</em></p><div class="callout callout-green"><!-- --><p>Em outras palavras, as "pirâmides" tornam as pessoas Humanas. Elas as tornam LIVRES! Elas produzem LIBERDADE! Geram e a trazem! Para as pessoas. Pessoas comuns, ordinárias, simples. (Como as pessoas vão usar essa liberdade, já é outra questão.) Esta é a causa raiz. De tudo! É exatamente por isso que as "pirâmides financeiras" são tão temidas e odiadas. Os anfitriões. Essa é a essência de tudo.</p></div><p><a name="KGx3"></a><em>P.S. Aliás, não é à toa que coloco "pirâmide financeira" entre aspas em todos os lugares. É apenas para facilitar o entendimento, uma expressão conveniente que todo mundo conhece. Em todas as leis dos países desenvolvidos há uma definição clara de "pirâmide financeira", que pressupõe a promessa de alta rentabilidade. É exatamente por isso que o MMM Global não é uma pirâmide financeira — aqui não há garantias nem promessas. Ao mesmo tempo, já não é segredo para ninguém que todas as instituições financeiras sem exceção — bancos, seguradoras, fundos, etc. — são pirâmides financeiras puras, e só são legais porque pertencem Os anfitriões, que são os mesmos que escrevem as leis.</em></p><p><a name="TKui"></a><em>P.P.S. A propósito, é exatamente por isso que as autoridades de todos os países lutaram tão ativamente contra Sergey Mavrodi e seu MMM! Tanto nos anos 90 do século XX quanto nos anos 10 do século XXI. Rotularam-no de "fraudador", "vigarista" e por aí vai. A mídia não parava de jogar lama nele e no MMM. Sem parar!!.. Não acham tudo isso muito, muito estranho? Suspeito? Aqueles que levaram o Rússia à sua situação atual com seu "talento" econômico-financeiro e poder político — nossos anjos brancos e fofinhos — rotulam um Homem de "fraudador" com tanta veemência? Tentam difamá-lo? Por quê? O que ele fez de tão grave? A ponto de poder ser julgado duas vezes pela mesma coisa?! Ele já cumpriu sua pena, mas mesmo assim continuaram aceitando ações cíveis das pessoas contra ele?! Ele, como pessoa física, emitia bilhetes MMM na época?! E ele nunca deu nenhuma garantia — aqui tudo sempre foi e será honesto e transparente. E os participantes sabem muito bem disso! E entendem o que realmente está acontecendo. E quem no final das contas enganou todo mundo (e mais de uma vez) — também é de conhecimento geral. ...Na época, esse fato me causou uma forte impressão. "Como assim? — eu me perguntava — será que um único Homem pode atrapalhar todo um sistema? Será que ele representa um perigo tão grande assim?!" (afinal, será que dedicariam tanta atenção a alguém inofensivo? criariam leis especificamente para a atividade dele?). Reflitam sobre isso no seu tempo livre.</em></p><hr/><div class="callout callout-neutral"><!-- --><h2><strong>AVISO!!!</strong></h2></div><p><a name="h9wY"></a>Antes de prestar ajuda voluntária e gratuita ("comprar" Mavro abstratos), cada participante é obrigado a ler este aviso!</p><div class="callout callout-green"><!-- --><h3><strong>CUIDADO!</strong></h3><h3><strong>Aqui as pessoas transferem seu dinheiro umas às outras de forma GRATUITA (Sem garantias nem promessas)!</strong></h3></div><p><a name="S9a9"></a>Ao participar do MMM Global, você corre um risco extremo, pois transfere seus fundos gratuitamente (Sem garantias nem promessas) para outras pessoas. Não se esqueça disso!</p><div class="callout callout-neutral"><!-- --><p><strong>No MMM Global Não há garantias ou promessas, expressas ou Formulário oculto! Não há contratos! Não há organização! Não há captação de recursos financeiros e (ou) outros bens! Não há investimentos! Nenhuma atividade empresarial! Nenhuma rentabilidade! Nenhum lucro ou ganho! Nenhuma atividade de investimento! Não há registro estatal e, portanto, também não há pessoa jurídica! Não há operações com valores mobiliários, nenhum relacionamento com participantes profissionais do mercado de valores mobiliários, você não adquire nenhum valor mobiliário! (E você precisa deles?) Não há absolutamente nada!! Eu apenas recomendo que as pessoas se ajudem voluntária e gratuitamente (Sem garantias nem promessas) com seus fundos pessoais disponíveis.</strong></p></div><p><a name="hImE"></a>As pessoas transferem voluntária e gratuitamente (Sem garantias nem promessas) seus fundos para outras pessoas exatamente iguais a elas, prestando-lhes ajuda financeira na medida de suas possibilidades nestes tempos tão difíceis. Sem nenhuma garantia, obrigação ou promessa — simplesmente transferem e pronto! O dinheiro é delas, propriedade privada — então as pessoas fazem o que querem com ele. Umas transferem seus fundos para outras. Sem contratos, sem condições de prazo ou reembolso, etc. — sem garantias, obrigações e promessas, repito. É assim que elas se ajudam neste momento difícil. É impossível proibir tais transferências por qualquer lei! Pois seria preciso proibir a propriedade privada. E tais transferências não estão sujeitas a nenhum imposto, porque não há fonte de renda aqui! Não, não e não! E não pode haver. Em princípio. Pelos séculos dos séculos. Amém. Entenderam?</p><div class="callout callout-neutral"><!-- --><p><strong>Eu não lhes dou nenhuma garantia, nem promessa. Nem explícita, nem implícita. </strong>(Ao contrário, por exemplo, dos bancos. Que dão! De bom grado. Dizem que eles nunca vão à falência.)</p></div><p><a name="GbAw"></a>Falando de modo geral, qualquer garantia nesta vida é uma mentira. Onde, por exemplo, estão as garantias de que o dia de amanhã vai chegar?..</p><p><a name="r91W"></a><strong>Não crio falsas expectativas de que você possa enriquecer rapidamente aqui. Pelo contrário, você vai perder tudo!</strong> Você está transferindo seus fundos voluntária e gratuitamente (Sem garantias nem promessas) para outra pessoa exatamente igual a você — prestando a ela uma ajuda financeira possível. Só isso! Esqueça esse dinheiro!! A partir deste momento, o dinheiro é dela, e NÃO seu!! <strong>Podem não lhe transferir o dinheiro sem dar explicações!!</strong> Agora você só tem os Mavro abstratos, cuja "cotação" reflete apenas a sua possibilidade de solicitar ajuda, nada mais. Ninguém lhe garante que essa ajuda será prestada. Pois tais garantias não existem na natureza.</p><p><a name="Pf0G"></a><strong>Aqui não há regras. A única regra é: não há regra nenhuma! Mesmo que você siga rigorosamente todos os meus conselhos e recomendações gratuitas, você ainda pode perder tudo: podem não transferir os fundos para você, podem não lhe prestar ajuda. Sem motivo ou explicação alguma.</strong></p><p><a name="tPYk"></a>Ao que tudo indica, eu nem sou totalmente são. Sou um maluco! (Se eu fosse normal, teria me metido?)</p><p><a name="GIaS"></a>Segundo as garantias de todos os principais financistas, economistas, especialistas, etc., etc., é impossível fornecer em princípio "rentabilidade" tão alta <em>(as "cursos" dos Mavro abstratos <strong>PRESUMIVELMENTE </strong>crescem a um ritmo de 20% ao mês!</em>) por princípio, e tudo isso é pura fraude e uma "audaciosa e descarada" vigarice.</p><p><a name="jXdC"></a><strong>Da qual não se deve participar de forma alguma e sob nenhuma circunstância!!! Então escutem as pessoas inteligentes — NÃO PARTICIPEM AQUI! NÃO transfiram seus fundos para ninguém!</strong></p><p><a name="vUC2"></a>Como tudo isso funciona — eu mesmo não sei nem faço ideia, e não consigo “explicar” nada. Quem sabe como! E será que funciona mesmo?! Não se sabe. Mas no MMM Global, pelo menos, funcionava. Em todo o mundo. Embora lá tudo crescesse duas vezes mais rápido.</p><p><a name="YLV9"></a>Como Sergey Mavrodi conseguia fazer tudo isso, eu não compreendo. Não entendo. Não faço ideia. (Eu mesmo fico surpreso, caramba!!) Ele, segundo suas próprias palavras, era como um Aladino analfabeto que encontrou uma lâmpada mágica. Esfregou — apareceu o gênio. Realizou todos os desejos. E voltou a se esconder na lâmpada. Mas de onde veio esse gênio e qual é a sua natureza (e como ele cabe dentro dessa lâmpada, que o parta?!) — Aladino não sabe. <strong>Chamo a sua especial Atenção para o fato de que eu nem sou o Sergey Mavrodi! E como eu, o desconhecido Danil Yusupov, poderia chegar aos pés de Aladino e sua lâmpada?!</strong></p><p><a name="ZJ8W"></a>Por que estou contando tudo isso? não para quê! Só comichão. Veio a ideia, dá vontade de falar. Mostrar como sou esperto. "Bom, é maluco! O que fazer com ele?"</p><p><a name="i0fj"></a>Mas vocês, vocês são pessoas sensatas, não são? Vocês não vão se deixar envolver! Não vão deixar que os envolvam!! Não é? Não vão deixar? Verdade?</p><p><a name="Xlu9"></a>E, aliás, eu estou mentindo. Conhece esse paradoxo? Se eu minto, digo a verdade, e se digo a verdade, estou mentindo. Uma afirmação simultaneamente verdadeira e falsa. O famoso paradoxo do mentiroso!</p><p><a name="kApI"></a>Resumindo. Eu os conclamo, os convenço, os peço e os imploro:</p><div class="callout callout-purple"><!-- --><h3><strong>NÃO PARTICIPEM DESSE MALDITO MMM Global!</strong></h3><h3><strong>REPITO EM PORTUGUÊS E BEM NO OUVIDO QUE VOCÊS DEVEM OUVIR:</strong></h3><h3><strong>ESQUEÇAM ISSO!</strong></h3><h3><strong>CONTINUEM VIVENDO COM SEU ÚNICO SALÁRIO!</strong></h3><h3><strong>NÃO PARTICIPEM! NÃO PARTICIPEM! NÃO PARTICIPEM!</strong></h3><h3><strong>NÃO! NÃO!! NÃO!!!</strong></h3><h3><strong>FUJAM O MAIS RÁPIDO POSSÍVEL DESTE SITE/BLOG/CANAL DO TELEGRAM/BOT DO TELEGRAM E NUNCA MAIS VOLTEM AQUI!!!!!</strong></h3><h3><strong>ESTÁ TUDO CLARO?</strong></h3></div><hr/><p><a name="tKDG"></a>Se você também for maluco e, depois de todos estes meus avisos, argumentos, pedidos e súplicas... súplicas?.. ainda assim decidir transferir gratuitamente seus fundos para outra pessoa desconhecida e, assim, participar do MMM Global (nem acredito que existam pessoas assim!), então clique: <a class="" href="Regras.html"><strong>AQUI</strong></a></p><div class="callout callout-neutral"><!-- --><p>P.S. <strong>Ah, sim! O MMM Global atua de forma absolutamente LEGAL.</strong> Repito mais uma vez — as pessoas transferem voluntária e gratuitamente (Sem garantias nem promessas) seus fundos (cripto) para outras pessoas exatamente iguais a elas. Só porque sim! Sem garantias, sem obrigações, sem promessas, sem condições de prazo ou reembolso, sem contratos, etc. É propriedade privada delas, então fazem com ela o que bem entenderem, o que acharem necessário. Assim, umas pessoas prestam a outras uma ajuda financeira gratuita (Sem garantias nem promessas) e possível, só isso. Portanto, não há e não pode haver nenhuma captação de recursos ou outros bens. Todos os artigos do Código Penal passam longe. Os participantes do MMM Global transferem voluntária e gratuitamente (Sem garantias nem promessas) seus fundos para outras pessoas. Tudo isso é legal! Pois não viola a lei. Eu mesmo não capto nada nem ninguém para lugar nenhum — eu apenas falo abertamente que, na difícil situação econômica de hoje, é necessário ajudar uns aos outros! E eu mesmo ajudo — com conselhos, recomendações e consultorias.</p></div><hr/><blockquote><a name="oCmg"></a><strong>P. P. S. Com certeza todos se perguntam: para que diabos eu, Danil Yusupov, preciso de tudo isso?</strong> <em>Qual é o meu objetivo? Vou explicar! Na verdade, é tudo muito interesseiro. E até primitivo. Mas não, não é dinheiro! Como vocês já devem ter pensado. Dinheiro, numa escala dessas, já não cola. Como Sergey Panteleevich Mavrodi bem observou em sua época.</em></blockquote><blockquote><a name="DX5q"></a><em>A vida me ensinou que não se pode ser rico entre pobres, honesto entre mentirosos, culto entre ignorantes, saudável entre doentes, corajoso entre covardes, feliz enquanto se está cercado de pessoas infelizes. Não se pode! Pois todos Nós somos interdependentes! E não só Nós. Tudo ao redor, todo este mundo é permeado por princípios de interdependência! Tudo está interligado em todos os níveis. E tudo sempre busca o equilíbrio. Portanto, se você quer viver na abundância, primeiro precisa garantir essa abundância para as pessoas ao seu redor (mesmo que pela lógica superficial de que elas não queiram te roubar ou até te matar por inveja).
+
+Entendem, um faminto não pode doar, pois não tem o que dar! — uma pessoa não pode pensar no espiritual e se desenvolver enquanto passa fome — primeiro é preciso alimentar as pessoas de forma básica. Garantir suas necessidades materiais fundamentais. Para que, mais tarde, elas tenham tempo para se tornarem cultas, autossuficientes, corajosas, saudáveis, honestas e ricas, tanto material quanto espiritualmente! Pessoas Felizes! Eu vou mostrar a todos que, interagindo de uma determinada maneira, <strong>AGINDO DE FORMA HONESTA E ABERTA</strong>, mesmo hoje é possível Viver como Gente! E não apenas sobreviver, arrastando uma existência escrava e vil. Pois só então eu mesmo me tornarei Humano. Eu só quero estar cercado por Pessoas Racionais, e não por escravos oprimidos. Quero uma Vida Humana simples hoje e agora, e não em algum lugar no futuro (na «vida após a morte»).
+
+Vocês mesmos não estão cansados de todo esse horror mentiroso e total? Hein? Não estão cansados de incutir em si mesmos o princípio escravo e vil de «.eu não posso fazer nada a respeito.»? Não estão enjoado de aguentar toda essa humilhação de crédito e hipoteca, da qual todos nós somos «involuntariamente» participantes? Não estão cansados de cavar a própria cova com as próprias mãos, apoiando este sistema injusto?!.. «Não há saída!» Claro que há! Aqui está ela! Um sistema alternativo! Honesto e aberto! O ANTISISTEMA!..
+
+Manipular pessoas, transformando-as em escravos estúpidos e submissos que não fazem perguntas demais, é muito fácil (enganar a todos e depois roubá-los). Muito mais difícil é tornar as pessoas Livres. (Assim como pensar em algo bom é muito mais difícil do que em algo ruim. Os pensamentos ruins parecem vir sozinhos. Nunca pararam para pensar por que isso acontece?.. Ora, para pensar em algo bom, é preciso fazer esforço: usar a imaginação, a lógica, etc. Aliás, para acreditar em algo bom e gentil, basta fazer o bem aos outros! É preciso agir! Fazer esse «bem». E não ficar de braços cruzados, consolando e justificando a si mesmo, dizendo «…eu não posso fazer nada a respeito…» Claro que pode! Tudo o que você vê ao seu redor, tudo o que você usa no dia a dia, foi criado por pessoas que agiram apesar de tudo. Agiram contra tudo! Contra todos esses ditos escravos de «você não vai conseguir», «hahaha, você é maluco, hehehe», etc.).
+
+Sim, tudo isso é complexo, difícil, mas é possível! Assim como é possível todo esse sistema mentiroso existente, essa maldita distopia financeira e escrava (aliás, o «mal» consegue resultados, entre outras coisas, porque o bem se mantém humildemente inerte), também é possível o Antissistema — honesto e aberto. Livre! Humano! E vale a pena viver e lutar por ele. Claro, não se pode mudar o mundo sozinho. Só se pode mudar a si mesmo, sua atitude, seus princípios, pontos de vista e visão de mundo. Interagindo de forma construtiva uns com os outros e conscientes da interdependência total. Foi exatamente por isso que Sergey Mavrodi chamou o MMM-2011 em sua época, «decifrou»: Nós Podemos Muito!</em></blockquote><h4><a name="МЫ&amp;#33;-ВСЕ-ВМЕСТЕ&amp;#33;&amp;#33;"></a>NÓS! TODOS JUNTOS!!</h4><div class="callout callout-purple"><!-- --><h4>Nesta vida, tudo depende de cada um de Nós.</h4></div><h4><a name="Аминь."></a>Amém.</h4><div class="callout callout-blue"><!-- --><p>Registo no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobal_static">@Mavrodi_robot</a></strong></p></div><div class="callout callout-amber"><!-- --><p><a class="" href="index.html"><strong>PARA A PÁGINA PRINCIPAL</strong></a></p></div></article>
+</article>
+</div>
+</body>
+</html>

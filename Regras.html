@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recomendações que chamamos de “REGRAS”. Em resumo.</title>
+<style>
+:root {
+  --bg: #f9f7f2;
+  --text: #1f1f1f;
+  --text-muted: #4a4640;
+  --accent: #2a4a6f;
+  --border: #d9d4c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1816;
+    --text: #e8e4d9;
+    --text-muted: #a39a8c;
+    --accent: #8aa4c2;
+    --border: #3a3630;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.82;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+article {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.4em;
+}
+
+h2, h3, h4 {
+  font-weight: 700;
+  margin: 1.8em 0 0.6em;
+}
+
+p {
+  margin: 0 0 1.15em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+figure {
+  margin: 1.2em 0;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+figcaption {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 0.4em 0 !important;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* === Правила для компактных видео ===
+   Базовый маленький отступ + сильное правило для соседних элементов.
+   Отдельная нейтрализация .wrap (основная причина больших пустот в старых версиях).
+*/
+.video-container {
+  margin: 0.4em 0 !important;
+}
+
+* + .video-container {
+  margin-top: 0.3em !important;
+}
+
+.wrap > .video-container,
+.wrap > img,
+.wrap figure > img {
+  margin: 0.4em 0 !important;
+}
+
+/* Немного подрезаем маржины у типичных соседей видео (заголовки, фигуры) */
+h1, h2, h3, h4, h5, h6,
+p, figure {
+  margin-bottom: 0.5em;
+}
+
+.callout {
+  margin: 1.8em 0;
+  padding: 1.1em 1.3em;
+  border-radius: 6px;
+  border-left: 5px solid var(--accent);
+  background: #f0e9dc;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Цветные варианты callout (светлая тема) */
+.callout-blue   { border-left-color: #4a6fa5; background: #e8eef7; }
+.callout-amber  { border-left-color: #b38b4d; background: #f5f0e6; }
+.callout-purple { border-left-color: #9b6b8a; background: #f7eef4; }
+.callout-green  { border-left-color: #4a8a6f; background: #e8f3ed; }
+.callout-neutral { border-left-color: #6b6257; background: #f0e9dc; }
+
+/* Заголовки внутри callout не должны сильно раздувать рамку */
+.callout h1,
+.callout h2,
+.callout h3,
+.callout h4,
+.callout h5 {
+  margin: 0.2em 0 0.35em;
+  line-height: 1.25;
+  font-size: 1.1em;
+}
+
+/* Тёмная тема для рамок — чтобы не светились ярко */
+@media (prefers-color-scheme: dark) {
+  .callout {
+    background: #2c2a26;
+  }
+  .callout-blue   { background: #1e2a3a; border-left-color: #7aa0d1; }
+  .callout-amber  { background: #2f2a1f; border-left-color: #d4b37a; }
+  .callout-purple { background: #2a2430; border-left-color: #c48fb3; }
+  .callout-green  { background: #1f2a24; border-left-color: #7ab89a; }
+  .callout-neutral { background: #2c2a26; border-left-color: #a89f90; }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 2.4em 0;
+}
+
+@media (max-width: 600px) {
+  .wrap { padding: 40px 18px 80px; }
+  body { font-size: 17px; }
+}
+  </style>
+</head>
+<body>
+<div class="wrap">
+<article>
+<h1>Recomendações que chamamos de “REGRAS”. Em resumo.</h1>
+<article class="article__content text" itemprop="articleBody"><div class="callout callout-blue"><!-- --><p>Registo no bot do Telegram: <strong><a href="https://t.me/mavrodi_robot?start=MMMglobalStatic">@Mavrodi_robot</a></strong></p></div><div class="callout callout-amber"><!-- --><p><strong><a class="" href="index.html">PARA A PÁGINA INICIAL</a></strong></p></div><div class="callout callout-neutral"><!-- --><p><strong><a class="" href="regras-part-1.html">Com mais detalhes e ponto a ponto</a></strong></p></div><p><a name="tteK"></a>A imaginação é muito mais importante que o conhecimento.</p><p><a name="L8iO"></a>O conhecimento se baseia apenas no que sabemos e entendemos agora,</p><p><a name="x8ax"></a>enquanto a imaginação</p><p><a name="67c0"></a>inclui todo o mundo e tudo o que um dia entenderemos e conheceremos.</p><p><a name="D7Hx"></a><strong>Albert Einstein</strong></p><hr/><div class="callout callout-blue"><!-- --><p><strong>ATENÇÃO!</strong> Agindo de acordo com estas minhas recomendações, que na essência não são regras nenhuma, mas simplesmente minha opinião (estou registrando meus pensamentos. Lembro mais uma vez por precaução), — Você confirma que já leu o <strong><a class="" href="AVISO.html">AVISO</a></strong> e toma a decisão de participar com a mente sã e memória sóbria.</p></div><hr/><figure class="m_column" itemscope="" itemtype="http://schema.org/ImageObject"><a name="9Io8"></a><!-- --><img class="" id="9Io8" src="8dcd185a-4f2d-4a05-b771-05a0b3b54497.jpeg"/><!-- --><figcaption itemprop="description"><!-- -->Rede estruturada viva, baseada na confiança e ajuda mútua; sistema automatizado absolutamente descentralizado, no qual o bot do Telegram conecta os participantes diretamente uns aos outros; ausência de bancos de dados únicos, servidores e centros de controle. Total dispersão!</figcaption></figure><hr/><p><a name="lK2J"></a>Acima de tudo! Se Você leu todas essas "regras" e "não entendeu nada" — não se preocupe. Tudo novo sempre parece incompreensível no início. Só entendemos o que já conhecemos (tudo o habitual). É assim que somos feitos. :-))</p><div class="callout callout-amber"><!-- --><p>Por isso, é melhor entrar imediatamente no bot do Telegram <strong><a href="https://t.me/mavrodi_robot?start=MMMglobalStatic">https://t.me/mavrodi_robot</a></strong> e certificar-se de que tudo é intuitivamente compreensível lá. Se não estiver claro, entre em contato diretamente com o consultor de suporte técnico — ele explicará tudo da melhor forma e o registrará na célula dele. Com grande alegria, aliás. Ele receberá bônus abstratos Mavro por Você. Então Você é ouro puro. Você não precisa fazer nada. E lá já... conforme a peça... Entenda! Você vai se virar. Só há uma saída de qualquer maneira! Boa sorte!!</p></div><p><a name="YF1K"></a><strong>Ah sim! Uma coisa que geralmente deixa os novatos tensos.</strong></p><p><a name="HFEG"></a>E se o bot "Vai cair", quebrar ou o Telegram for bloqueado?!..</p><p><a name="GUBJ"></a>Sim, isso pode acontecer. Na vida tudo pode acontecer. "Nunca se sabe onde se encontra, onde se perde". No entanto, a base de dados não está armazenada no Telegram: O importante é que os Mavro abstratos permanecem com Você, eles estão intactos, nada aconteceu com eles. Eles são virtuais! Eles nem existem! E o que pode acontecer com algo que não existe? Então isso não te afeta (se, por exemplo, o escritório do banco pegar fogo — são problemas do banco, não dos clientes). E podemos levantar o bot a qualquer momento em outro nome e lançar tudo. Até sem Telegram, – em qualquer site podemos lançar! Como gabinetes pessoais. Então não há nada de ruim. Apenas acompanhe atentamente o site <a href="https://bazamavrodi.com/"><strong>https://BazaMavrodi.com</strong></a> e no canal do YouTube <strong><a href="https://youtube.com/@BazaMavrodi">https://youtube.com/@BazaMavrodi</a></strong> – todas as notícias estarão lá, caso algo aconteça.</p><p><a name="uGRe"></a>Tudo bem? Acalmei? Sucessos!!</p><hr/><p><a name="zUVB"></a>O<strong> que é apresentado a seguir não são regras no sentido habitual da palavra. Lembro que não há regras no MMM Global. A única regra: não há regras!</strong> E isso tudo são apenas meus conselhos. Minha opinião. Suposições. Vestidas em uma forma artística para maior expressividade, digamos assim. De alguma forma me parece que, prestando atenção a esse delírio de louco, os participantes do Sistema Global de Ajuda Mútua MMM Global poderão "comprar/vender" Mavro abstratos com taxas de crescimento "cursos" presumidas de 20% ao mês! (Como parece para vários especialistas e consultores financeiros que uma ou outra ação deve ser comprada. Que elas subirão de preço e tal e tal. E para mim também – apenas parece).</p><p><a name="PXcR"></a>Mas eu sou apenas um Homem e posso errar também. Lembre-se disso sempre. Lembro também que no MMM Global todas as transferências acontecem estritamente entre os participantes. No MMM Global não há uma conta única para onde todo o dinheiro fluiria. Não há quaisquer entradas externas provenientes de investimentos, etc. (Você transfere seu dinheiro diretamente a outra pessoa sem garantia ou promessa de retorno).</p><div class="callout callout-neutral"><!-- --><p>No MMM Global algumas pessoas prestam ajuda gratuita (sem garantias nem promessas) a outras pessoas na esperança de, após algum tempo, receberem a mesma ajuda gratuita (sem garantias nem promessas) de outras pessoas presumivelmente em maior volume. A qualquer momento Você pode perder tudo! Transferiu seu dinheiro para outra Pessoa − pronto, eles já não são seus! Você já se desfez desses recursos! Já − perdeu! Podem não transferir nada para Você sem qualquer motivo ou explicação. Então − "pense você mesmo, decida você mesmo". "Ter ou não ter". E participe com quantias não críticas para você.</p></div><div class="callout callout-green"><!-- --><p><strong>🎯 O objetivo do Sistema Global de Ajuda Mútua MMM Global é criar uma comunidade informal de pessoas em todo o mundo que se ajudam mutuamente com seu dinheiro livre exclusivamente com base na confiança.** Sem contratos formais e burocracia. "Banco popular", no qual o dinheiro trabalha para as pessoas, e não as pessoas para o dinheiro. Sem intermediários, sem empréstimos, sem depósitos – sem agiotas! Um sistema no qual as pessoas fornecem umas às outras uma renda básica incondicional às suas próprias custas. – Confiança no amanhã! Hoje você ajuda, amanhã recebe ajuda.</strong></p></div><div class="callout callout-neutral"><!-- --><h2>Essência em resumo:</h2></div><p><a name="1e5d"></a>Entre no bot do Telegram https://t.me/mavrodi_robot?start=telegraph e automaticamente entre na célula, "ingresse" no MMM Global! Em seguida, preste ajuda gratuita a outros participantes, clicando nos botões correspondentes no menu do bot, − assim Você, figurativamente falando, "compra" Mavro abstratos e observa como eles presumivelmente crescem em "preço" a taxas de 20% ao mês.</p><p><a name="29p4"></a>20% ao mês equivale a aproximadamente 9(!) vezes em um ano. Só para constar. Para quem não é muito bom em matemática. (Presumivelmente, é claro!) Isso significa que, <strong>em apenas quatro meses, você já pode solicitar o dobro da ajuda que prestou.</strong></p><p><a name="mv3d"></a>Quer, por assim dizer, "vender" seus Mavro abstratos total ou parcialmente? (Por um novo "preço", presumivelmente mais alto?)</p><p><a name="Sppa"></a><strong>Sem problemas! A qualquer momento e sem nenhuma restrição!</strong></p><p><a name="tBUY"></a>Solicite ajuda no bot – por assim dizer, "venda" seus Mavros abstratos à vontade. E então, outros participantes do Sistema Global de Ajuda Mútua presumivelmente transferirão o dinheiro deles para você (exatamente como você transferiu o seu para alguém no início). É muito simples!</p><div class="callout callout-purple"><!-- --><p>O que mais? <strong>Você receberá Bônus de Indicação</strong> (bem, os prémios) em Mavro abstratos por cada novo participante que você trouxer para o Sistema.</p><p>10% da primeira ajuda prestada por ele e 5% de todas as ajudas subsequentes ("compras" de Mavro abstratos pelo seu indicado). Nada mal, né?</p></div><p><a name="yfoZ"></a>Isso é, em resumo.</p><hr/><div class="callout callout-green"><!-- --><h3>Agora, com mais detalhes.</h3></div><p><a name="vANA"></a>Todos os participantes do Sistema Global de Ajuda Mútua MMM Global são divididos, por convenção, em células.</p><p><a name="hggw"></a>À frente de cada célula está um consultor. Os consultores são participantes exatamente como os outros, apenas mais experientes e responsáveis. No futuro, você também pode se tornar um consultor – será muito bem-vindo! Você também receberá <strong>bônus</strong> adicionais de <strong>Consultor</strong> em Mavro abstratos – 5% de toda a ajuda prestada pelos participantes da sua célula.</p><p><a name="2or3"></a>À frente de todos está o Gerente. O consultor-chefe, nada mais que isso.</p><hr/><div class="callout callout-neutral"><!-- --><p><strong>Quer prestar ajuda a outros participantes do Sistema? Por assim dizer, "comprar" Mavro abstratos?</strong> Acesse o bot <a href="https://t.me/mavrodi_robot?start=MMMglobalStatic"><strong>https://t.me/mavrodi_robot</strong></a> e clique no botão "<strong>Prestar Ajuda</strong>" no menu. Dessa forma, você informa ao Sistema sobre a sua intenção de ajudar outros participantes. Após algum tempo, o bot do Telegram enviará a você uma solicitação de ajuda de outro participante exatamente como você, com sua detalhes da carteira USDT, na rede TRC-20 ou BEP-20. (que no momento já está solicitando ajuda – por assim dizer, "vendendo" seus Mavro com os juros acumulados). Você transfere seu dinheiro diretamente a outro participante, (sem garantia ou promessa de retorno), em dele carteira criptográfica USDT de acordo com os detalhes por endereço, na rede TRC-20 ou BEP-20. Assim que os fundos estiverem na carteira do outro participante e ele confirmar isso no bot, a partir desse momento seus Mavro abstratos serão confirmados e presumivelmente começarão a "crescer" a uma taxa de 20% ao mês.</p></div><hr/><div class="callout callout-green"><!-- --><p><strong>Quer pedir ajuda você mesmo? Por assim dizer, "vender" seus Mavro abstratos por uma "curses" mais alta?</strong></p><p>Acesse novamente o bot <a href="https://t.me/mavrodi_robot?start=MMMglobalStatic"><strong>https://t.me/mavrodi_robot</strong></a> e clique no botão "Solicitar Ajuda" no menu – o bot direcionará seu pedido de ajuda diretamente a outro participante que, no momento, deseja prestar ajuda (assim como você fez no passado). E o outro participante transfere o dinheiro dele diretamente para você, (sem garantia ou promessa de retorno).</p></div><p><a name="hshy"></a>Como muitos iniciantes agem de forma lenta – não estão acostumados, não entendem de primeira o que precisa ser feito aqui –, às vezes é preciso esperar. Fator puramente humano. Mas por essas taxas de juros vale a pena esperar, não concorda? Mesmo que o iniciante estivesse apenas brincando no bot e não pretenda enviar o dinheiro para você, em breve o bot redirecionará seu pedido de ajuda para outro participante. E o bot não aceitará mais solicitações de prestação de ajuda daquele que não fez a transferência para você, até que ele entre em contato com um consultor de suporte técnico para dar explicações. Se o participante não enviar nada depois disso, ele será bloqueado pelo sistema marcado como "pest".</p><p><a name="sGm3"></a>Como você pode ver, tudo é simples, claro e fácil de entender. O bot, em modo automático e através de um determinado algoritmo matemático, conecta os participantes entre si, e mantém um registro dos seus mavro abstratos. E os consultores ajudam os novos participantes a entender o funcionamento do Sistema e participam da resolução de situações controversas: por exemplo, se o participante remetente clicou no botão do bot informando que enviou os fundos, mas na verdade não enviou, ou se o participante destinatário recebeu os fundos, mas não confirmou isso no bot. Os consultores também monitoram o processo, identificando sabotadores e mal-intencionados. Como é um trabalho bastante minucioso, eles recebem <strong>"bônus de consultor"</strong> em Mavro abstratos provenientes de prestar assistência por participantes de seus célula. Esses Mavro abstratos de bônus ficam congelados por 30 dias – se o participante solicitar ajuda antes desse prazo, eles são queimados. Isso é feito para evitar que o mesmo dinheiro fique indo e voltando. :-))</p><hr/><p><a name="Qtew"></a><strong>Vou dar um exemplo. Digamos que você prestou $100 de ajuda.</strong></p><p><a name="ZukD"></a>Então, pela "curses", isso resultou, digamos, em 10 Mavro-20% abstratos (e vários bônus abstratos do Mavro de bônus, falaremos mais sobre eles adiante, então não os consideraremos no cálculo por enquanto).</p><p><a name="AEpb"></a><strong>Portanto, agora você tem 10 Mavro-20% abstratos.</strong></p><p><a name="fHvL"></a>À medida que a "curses" deles presumivelmente sobe, você pode solicitar ajuda e, por assim dizer, "vendê-los" todos de uma vez ou em partes. A qualquer momento! Recebendo dinheiro de verdade na sua conta carteira de criptomoedas USDT (TRC-20, BEP-20), diretamente de outros participantes, (sem garantia ou promessa de retorno). Depois, você mesmo pode voltar a prestar ajuda (sem garantias nem promessas) e, por assim dizer, "comprar" mais Mavro abstratos! Bem, em suma, tudo funciona como com uma moeda comum. Nada de complicado. Passou um mês – você os "vendeu" pela nova "curses" e recebeu, presumivelmente, $120.</p><p><a name="beFe"></a>Imagine o Sistema MMM Global como uma caixinha virtual coletiva. Na qual todos depositam constantemente seus fundos livres e da qual depois os retiram conforme a necessidade, presumivelmente em um volume maior.</p><p><a name="V3R3"></a>Você "colocou" $100. Tempos depois, quer "retirar" $150? Você solicita ajuda – e os próprios outros participantes transferem diretamente para você! Da mesma forma que você, no passado, ajudou outros participantes com seus fundos.</p><p><a name="BHqz"></a>Sim, não haverá fundos suficientes na caixinha para todos ao mesmo tempo, mas também não é necessário que haja para todos a qualquer momento. Leia uma breve publicação sobre isso a respeito do <strong><a class="" href="social.html">problema da injustiça social</a></strong>.</p><p><a name="kNOD"></a>É perfeitamente suficiente que, diariamente, haja aqui apenas a quantia que é solicitada todos os dias. E isso é totalmente alcançável (afinal, dinheiro novo entra o tempo todo – participantes antigos e novos expressam a intenção de prestar ajuda). Só seria necessário para todos se TODOS QUISEREM retirar AO MESMO TEMPO (bem, ou quase todos :-)).</p><p><a name="2W0o"></a>No entanto, na prática, isso nunca acontece. Apenas em caso de pânico. (Por exemplo, se todos correrem para a saída do cinema ao mesmo tempo, também vai haver um tumulto. Assim como em um banco – se todos quiserem sacar seus depósitos ao mesmo tempo, não haverá dinheiro para todos. E você mesmo entende perfeitamente tudo isso. O pânico é fatal para qualquer estrutura!).</p><div class="callout callout-neutral"><!-- --><p><strong>A moral da história é simples: não entre em pânico!</strong> Aja com calma e bom senso, e tudo ficará perfeito! Tudo aqui, aliás, como em qualquer lugar, depende exclusivamente do comportamento dos participantes. Do seu comportamento. Da sua consciência e racionalidade. Portanto, se você decidiu participar e prestar ajuda às pessoas (sem garantias nem promessas) participe com fundos que não sejam críticos para você – aquelas quantias das quais, ao se desfazer, você não ficará estressado nem deixará os outros nervosos. Como se diz: faça aos outros o que você gostaria que fizessem a você. Em resumo, não seja ganancioso! Não dá para ganhar todo o dinheiro do mundo. Nesse caso, nossa caixinha coletiva – nosso Sistema Global de Ajuda Mútua MMM Global – será simplesmente inabalável! Tudo está em Nossas mãos.</p></div><h4><a name="Мы-Можем-Многое&amp;#33;&amp;#33;&amp;#33;"></a>Nós Podemos Muito!!!</h4><hr/><div class="callout callout-neutral"><!-- --><h2>De forma bem detalhada e por tópicos, leia <strong><a class="" href="regras-part-1.html">AQUI</a></strong></h2></div></article>
+</article>
+</div>
+</body>
+</html>
